@@ -1,0 +1,753 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>外资资产变现与资金出境 · 上海涉外律师 · 赵海英律师</title>
+<meta name="description" content="外籍人士出售中国房产、退出公司股权后的资金跨境转移服务。协助完税、购汇、跨境汇款，确保合法合规出境。上海外滩律师，为您提供一站式资产变现与出境方案。">
+<style>/* ══════════════════════════════════════════════════════════════
+   赵海英律师 · 涉外民事法律服务
+   Design System
+   ══════════════════════════════════════════════════════════════ */
+
+/* --- Variables --- */
+:root {
+  --navy:       #0f1b2d;
+  --navy-light: #1a2d4a;
+  --gold:       #c9a84c;
+  --gold-light: #e8d08a;
+  --cream:      #f8f6f0;
+  --white:      #ffffff;
+  --gray-100:   #f4f4f4;
+  --gray-200:   #e8e6e1;
+  --gray-300:   #bcb9b2;
+  --gray-600:   #6b6862;
+  --gray-800:   #2d2b27;
+  --text:       #1a1a1a;
+  --text-light: #5a5a5a;
+  --shadow:     0 2px 20px rgba(15,27,45,0.08);
+  --shadow-lg:  0 8px 40px rgba(15,27,45,0.12);
+  --radius:     8px;
+  --max-width:  1200px;
+  --font-serif: 'Georgia', 'Noto Serif SC', serif;
+  --font-sans:  -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  --transition: 0.25s ease;
+}
+
+/* --- Reset --- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; font-size: 16px; }
+body {
+  font-family: var(--font-sans);
+  color: var(--text);
+  background: var(--white);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; text-decoration: none; transition: var(--transition); }
+img { max-width: 100%; height: auto; }
+ul { list-style: none; }
+
+/* --- Utility --- */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 24px; }
+.section { padding: 80px 0; }
+.section-dark { background: var(--navy); color: var(--white); }
+.section-cream { background: var(--cream); }
+.text-gold { color: var(--gold); }
+.text-center { text-align: center; }
+
+/* --- Typography --- */
+h1, h2, h3, h4 {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: 0.02em;
+}
+h1 { font-size: clamp(2rem, 4vw, 3.2rem); }
+h2 { font-size: clamp(1.6rem, 3vw, 2.4rem); margin-bottom: 1rem; }
+h3 { font-size: 1.35rem; margin-bottom: 0.6rem; }
+h4 { font-size: 1.1rem; margin-bottom: 0.4rem; }
+p { margin-bottom: 1rem; color: var(--text-light); }
+.section-dark p { color: rgba(255,255,255,0.75); }
+
+.section-title {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.section-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: var(--gold);
+  margin: 1rem auto 0;
+}
+.section-dark .section-title::after { background: var(--gold-light); }
+
+/* --- Header / Nav --- */
+header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  background: rgba(255,255,255,0.97);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  transition: var(--transition);
+}
+header.scrolled { box-shadow: 0 2px 30px rgba(0,0,0,0.08); }
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.logo {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1.2;
+}
+.logo small {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  font-weight: 400;
+  color: var(--gold);
+  letter-spacing: 0.1em;
+}
+
+.nav-links { display: flex; align-items: center; gap: 2rem; }
+.nav-links a {
+  font-size: 0.9rem;
+  color: var(--text);
+  font-weight: 500;
+  position: relative;
+}
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px; left: 0;
+  width: 0; height: 2px;
+  background: var(--gold);
+  transition: var(--transition);
+}
+.nav-links a:hover::after,
+.nav-links a.active::after { width: 100%; }
+
+.nav-cta {
+  background: var(--navy);
+  color: var(--white) !important;
+  padding: 8px 20px;
+  border-radius: var(--radius);
+  font-weight: 600;
+}
+.nav-cta:hover { background: var(--navy-light); }
+.nav-cta::after { display: none !important; }
+
+.lang-switch {
+  font-size: 0.8rem;
+  color: var(--gray-600);
+  border-left: 1px solid var(--gray-200);
+  padding-left: 1rem;
+}
+.lang-switch a:hover { color: var(--gold); }
+
+/* Mobile menu */
+.hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+.hamburger span { display: block; width: 24px; height: 2px; background: var(--navy); transition: var(--transition); }
+
+@media (max-width: 768px) {
+  .hamburger { display: flex; }
+  .nav-links {
+    position: fixed;
+    top: 72px; left: 0; right: 0;
+    flex-direction: column;
+    background: var(--white);
+    padding: 1.5rem;
+    gap: 1.2rem;
+    border-bottom: 1px solid var(--gray-200);
+    transform: translateY(-120%);
+    opacity: 0;
+    transition: var(--transition);
+    box-shadow: var(--shadow-lg);
+  }
+  .nav-links.open { transform: translateY(0); opacity: 1; }
+  .lang-switch { border-left: none; padding-left: 0; }
+}
+
+/* --- Hero --- */
+.hero {
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, var(--navy) 0%, #162d50 100%);
+  color: var(--white);
+  padding-top: 72px;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -50%; right: -20%;
+  width: 70%; height: 200%;
+  background: radial-gradient(ellipse, rgba(201,168,76,0.06) 0%, transparent 70%);
+  pointer-events: none;
+}
+.hero-content { max-width: 760px; position: relative; z-index: 1; }
+.hero h1 { margin-bottom: 1.5rem; }
+.hero h1 span { color: var(--gold); }
+.hero p { font-size: 1.15rem; color: rgba(255,255,255,0.7); margin-bottom: 2.5rem; max-width: 600px; }
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(201,168,76,0.15);
+  border: 1px solid rgba(201,168,76,0.3);
+  color: var(--gold-light);
+  padding: 4px 14px;
+  border-radius: 100px;
+  font-size: 0.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 32px;
+  border-radius: var(--radius);
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: var(--transition);
+  border: none;
+  font-family: inherit;
+}
+.btn-primary { background: var(--gold); color: var(--navy); }
+.btn-primary:hover { background: var(--gold-light); transform: translateY(-1px); }
+.btn-outline { background: transparent; border: 1.5px solid rgba(255,255,255,0.3); color: var(--white); }
+.btn-outline:hover { border-color: var(--gold); color: var(--gold); }
+.btn-navy { background: var(--navy); color: var(--white); }
+.btn-navy:hover { background: var(--navy-light); }
+
+.hero-stats {
+  display: flex;
+  gap: 3rem;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+.hero-stat h3 { font-size: 2rem; color: var(--gold); margin-bottom: 0; }
+.hero-stat p { font-size: 0.8rem; color: rgba(255,255,255,0.5); margin-bottom: 0; }
+
+@media (max-width: 768px) {
+  .hero { min-height: 70vh; text-align: center; }
+  .hero-content { max-width: 100%; }
+  .hero p { max-width: 100%; }
+  .hero-actions { justify-content: center; }
+  .hero-stats { justify-content: center; gap: 2rem; }
+}
+
+/* --- Services Grid --- */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+.service-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 2rem;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--gray-200);
+  transition: var(--transition);
+}
+.service-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-3px); }
+.service-card .icon { font-size: 2rem; margin-bottom: 1rem; display: block; }
+.service-card h3 { color: var(--navy); }
+.service-card p { font-size: 0.9rem; margin-bottom: 1.2rem; }
+.service-card .learn-more {
+  font-size: 0.85rem;
+  color: var(--gold);
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.service-card .learn-more:hover { gap: 8px; }
+
+/* --- About --- */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+.about-image {
+  background: var(--gray-200);
+  border-radius: var(--radius);
+  aspect-ratio: 4/5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gray-600);
+  font-size: 0.9rem;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+}
+.about-image .placeholder-text { color: rgba(255,255,255,0.3); }
+.about-text h2 { margin-bottom: 1.5rem; }
+.about-text .credentials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 1.5rem;
+}
+.about-text .credentials span {
+  background: var(--cream);
+  padding: 4px 14px;
+  border-radius: 100px;
+  font-size: 0.8rem;
+  color: var(--navy);
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+}
+
+/* --- Process / Steps --- */
+.steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2rem; counter-reset: step; }
+.step { text-align: center; counter-increment: step; }
+.step-number {
+  width: 56px; height: 56px;
+  border-radius: 50%;
+  background: var(--gold);
+  color: var(--navy);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 0 auto 1rem;
+  font-family: var(--font-serif);
+}
+.section-dark .step-number { background: var(--gold-light); }
+.step h4 { color: var(--white); }
+
+/* --- FAQ --- */
+.faq-list { max-width: 800px; margin: 0 auto; }
+.faq-item {
+  border-bottom: 1px solid var(--gray-200);
+  padding: 1.2rem 0;
+}
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--navy);
+  user-select: none;
+}
+.faq-question::after {
+  content: '+';
+  font-size: 1.3rem;
+  color: var(--gold);
+  transition: var(--transition);
+}
+.faq-item.open .faq-question::after { transform: rotate(45deg); }
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  padding: 0;
+}
+.faq-item.open .faq-answer {
+  max-height: 500px;
+  padding-top: 1rem;
+}
+.faq-answer p { font-size: 0.95rem; margin-bottom: 0.5rem; }
+
+/* --- Articles --- */
+.article-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+}
+.article-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--gray-200);
+  transition: var(--transition);
+}
+.article-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-2px); }
+.article-card-body { padding: 1.5rem; }
+.article-card .tag {
+  display: inline-block;
+  background: var(--cream);
+  color: var(--navy);
+  font-size: 0.75rem;
+  padding: 2px 10px;
+  border-radius: 100px;
+  margin-bottom: 0.6rem;
+  font-weight: 500;
+}
+.article-card h3 { font-size: 1.1rem; margin-bottom: 0.5rem; }
+.article-card h3 a { color: var(--navy); }
+.article-card h3 a:hover { color: var(--gold); }
+.article-card p { font-size: 0.85rem; }
+
+/* --- Contact --- */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+.contact-info h3 { color: var(--navy); margin-bottom: 1.5rem; }
+.contact-item {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.2rem;
+  align-items: flex-start;
+}
+.contact-item .icon { font-size: 1.3rem; flex-shrink: 0; margin-top: 2px; }
+.contact-item label { display: block; font-size: 0.8rem; color: var(--gray-600); }
+.contact-item span { font-weight: 500; }
+
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius);
+  font-family: inherit;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+  transition: var(--transition);
+  background: var(--white);
+}
+.contact-form input:focus,
+.contact-form textarea:focus,
+.contact-form select:focus {
+  outline: none;
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(201,168,76,0.15);
+}
+.contact-form textarea { min-height: 120px; resize: vertical; }
+
+@media (max-width: 768px) {
+  .contact-grid { grid-template-columns: 1fr; }
+}
+
+/* --- Footer --- */
+footer {
+  background: var(--navy);
+  color: rgba(255,255,255,0.6);
+  padding: 48px 0 24px;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  margin-bottom: 1.5rem;
+}
+.footer-brand .logo { color: var(--white); }
+.footer-brand p { font-size: 0.85rem; margin-top: 1rem; color: rgba(255,255,255,0.5); }
+.footer-col h5 { color: var(--white); font-family: var(--font-serif); margin-bottom: 1rem; }
+.footer-col a {
+  display: block;
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.5);
+  margin-bottom: 0.5rem;
+}
+.footer-col a:hover { color: var(--gold); }
+.footer-bottom { text-align: center; font-size: 0.8rem; }
+
+@media (max-width: 768px) {
+  .footer-grid { grid-template-columns: 1fr; }
+}
+
+/* --- Service Detail Page --- */
+.page-hero {
+  background: var(--navy);
+  color: var(--white);
+  padding: 120px 0 60px;
+}
+.page-hero h1 { margin-bottom: 0.5rem; }
+.page-hero p { color: rgba(255,255,255,0.7); font-size: 1.05rem; max-width: 600px; }
+.page-hero .breadcrumb {
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.4);
+  margin-bottom: 1rem;
+}
+.page-hero .breadcrumb a { color: rgba(255,255,255,0.6); }
+.page-hero .breadcrumb a:hover { color: var(--gold); }
+
+.content-section { padding: 60px 0; }
+.content-section h2 { color: var(--navy); margin-top: 2rem; }
+.content-section ul, .content-section ol { padding-left: 1.5rem; margin-bottom: 1rem; }
+.content-section li { margin-bottom: 0.5rem; color: var(--text-light); }
+.content-section .highlight-box {
+  background: var(--cream);
+  border-left: 4px solid var(--gold);
+  padding: 1.5rem;
+  border-radius: 0 var(--radius) var(--radius) 0;
+  margin: 1.5rem 0;
+}
+.content-section .highlight-box h4 { color: var(--navy); }
+
+/* --- CTA Banner --- */
+.cta-banner {
+  background: linear-gradient(135deg, var(--navy) 0%, #162d50 100%);
+  color: var(--white);
+  text-align: center;
+  padding: 60px 24px;
+}
+.cta-banner h2 { margin-bottom: 1rem; }
+.cta-banner p { color: rgba(255,255,255,0.7); max-width: 500px; margin: 0 auto 2rem; }
+
+/* --- Animations --- */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.fade-in.visible { opacity: 1; transform: translateY(0); }
+
+/* --- Testimonials --- */
+.testimonial-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 2rem;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--gray-200);
+}
+.testimonial-card .quote { font-style: italic; color: var(--text-light); margin-bottom: 1rem; }
+.testimonial-card .author { font-weight: 600; color: var(--navy); font-size: 0.9rem; }
+.testimonial-card .meta { font-size: 0.8rem; color: var(--gray-600); }
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+/* --- WeChat QR hover --- */
+.wechat-hint {
+  font-size: 0.8rem;
+  color: var(--gray-600);
+  margin-top: 0.3rem;
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="nav-inner">
+    <a href="index.html" class="logo">
+      赵海英律师
+      <small>北京市兰台（上海）律师事务所 · ZHAO HAIYING · ATTORNEY AT LAW</small>
+    </a>
+    <button class="hamburger" aria-label="菜单"><span></span><span></span><span></span></button>
+    <nav class="nav-links">
+      <a href="index.html">首页</a>
+      <a href="about.html">关于</a>
+      <a href="services.html">服务</a>
+      
+      <a href="for-lawyers.html">合作</a><a href="articles.html">文章</a>
+      <a href="contact.html">联系</a>
+      <a href="tel:17321099752" class="nav-cta">免费咨询</a>
+      <span class="lang-switch"><a href="english.html">EN</a></span>
+    </nav>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <p class="breadcrumb"><a href="index.html">首页</a> / <a href="services.html">服务</a> 
+      <a href="for-lawyers.html">合作</a>/ 资产变现与资金出境</p>
+    <h1>外资资产变现与资金出境</h1>
+    <p>合法合规，让您的资产安全跨境</p>
+  </div>
+</section>
+
+<section class="content-section">
+  <div class="container">
+    <h2>业务概述</h2>
+    <p>外籍人士或外国投资者在中国境内购置房产、投资企业后，在需要变现并将资金转移出境时，面临一套复杂的行政审批和税务程序。从完税证明到购汇申请再到跨境汇款，每一个环节都有严格的法律要求和时间窗口。</p>
+    <p>赵海英律师熟悉外汇管理规定和税务处理流程，能够为外籍客户提供从资产出售、税务清算到资金跨境转移的一站式法律服务。</p>
+
+    <div class="highlight-box">
+      <h4>典型客户场景</h4>
+      <p><strong>外籍人士出售中国房产</strong> — 在上海、北京、深圳等城市购置了房产，现因回国或移民其他国家需要出售，并将售房款汇出中国。</p>
+      <p><strong>外籍投资人退出公司股权</strong> — 作为外资企业的股东，退出股权后需要将投资本金和收益汇往境外。</p>
+      <p><strong>在华工作外籍人士</strong> — 在华工作期间积累的合法收入（工资、奖金等），在离境时需要汇出。</p>
+    </div>
+
+    <h2>服务内容</h2>
+    <ul>
+      <li><strong>资产出售法律服务</strong> — 协助客户完成房产、股权等资产的合法出售，审核交易合同，防范法律风险</li>
+      <li><strong>税务筹划与完税</strong> — 协助处理资产出售相关的增值税、所得税、印花税等税务事项，确保合法完税</li>
+      <li><strong>购汇申请代理</strong> — 协助客户向银行提交购汇申请，准备完整材料以通过外汇审核</li>
+      <li><strong>跨境汇款办理</strong> — 协助完成跨境汇款手续，确保资金合规、安全、及时到账</li>
+      <li><strong>政策合规咨询</strong> — 提供最新的外汇管理政策解读，确保资金出境的合规性</li>
+    </ul>
+
+    <h2>资金出境的法律框架</h2>
+    <p>根据现行外汇管理规定，外籍人士在中国境内的合法收入（包括出售房产所得、股权转让所得、合法薪资等），在提供充分证明材料的前提下，可以依法购汇汇出。关键要求包括：</p>
+    <ul>
+      <li>资金来源合法且已完税</li>
+      <li>提供完整的交易合同、完税证明、身份证明等材料</li>
+      <li>通过银行合规审核</li>
+    </ul>
+    <p>外汇管理政策处于动态变化中，建议在资金出境前寻求专业律师的指导，以确保流程顺利。</p>
+
+    <h2>为什么选择赵海英律师</h2>
+    <ul>
+      <li><strong>熟悉政策</strong> — 持续跟踪外汇管理政策变化，能够提供最新的合规指引</li>
+      <li><strong>在地优势</strong> — 上海外滩办公，与外汇指定银行保持顺畅沟通，提高办事效率</li>
+      <li><strong>全流程服务</strong> — 从资产出售到资金出境，一个律师团队全程负责，避免多头对接</li>
+      <li><strong>双语服务</strong> — 可提供中文和英文服务，与外籍客户沟通无障碍</li>
+    </ul>
+  </div>
+</section>
+
+<section class="cta-banner">
+  <div class="container">
+    <h2>有资产需要变现出境？</h2>
+    <p>联系赵海英律师，了解您的具体情况和可行的资金出境方案</p>
+    <a href="contact.html" class="btn btn-primary">免费咨询</a>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo">赵海英律师 <small>北京市兰台（上海）律师事务所 · ZHAO HAIYING · ATTORNEY AT LAW</small></div>
+        <p>专注涉外民事法律服​务，为海外华人和在华外籍人士提供专业的跨境资产处置解决方案。</p>
+      </div>
+      <div class="footer-col">
+        <h5>服务</h5>
+        <a href="inheritance.html">涉外继承</a>
+        <a href="fund-transfer.html">资产变现与资金出境</a>
+        <a href="cross-border-family.html">跨境婚姻家事</a>
+        <a href="estate-planning.html">涉外遗嘱与财富传承</a>
+      </div>
+      <div class="footer-col">
+        <h5>联系</h5>
+        <a href="contact.html">预约咨询</a>
+        <a href="tel:17321099752">📞 173 2109 9752 / 137 7445 0050</a>
+        <a>📍 上海市黄浦区中山东一路</a>
+        <a>📧 zhaohaiyinglawyer@126.com</a>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 赵海英律师 · 版权所有 · 北京市兰台（上海）律师事务所</div>
+  </div>
+</footer>
+
+<script>// ══════════════════════════════════════════════════════════════
+// 赵海英律师 · 网站交互
+// ══════════════════════════════════════════════════════════════
+
+document.addEventListener('DOMContentLoaded', function() {
+
+  // --- Header scroll effect ---
+  const header = document.querySelector('header');
+  if (header) {
+    window.addEventListener('scroll', function() {
+      header.classList.toggle('scrolled', window.scrollY > 20);
+    });
+  }
+
+  // --- Mobile menu toggle ---
+  const hamburger = document.querySelector('.hamburger');
+  const navLinks = document.querySelector('.nav-links');
+  if (hamburger && navLinks) {
+    hamburger.addEventListener('click', function() {
+      navLinks.classList.toggle('open');
+    });
+    // Close menu when clicking a link
+    navLinks.querySelectorAll('a').forEach(function(link) {
+      link.addEventListener('click', function() {
+        navLinks.classList.remove('open');
+      });
+    });
+  }
+
+  // --- FAQ accordion ---
+  document.querySelectorAll('.faq-question').forEach(function(q) {
+    q.addEventListener('click', function() {
+      var item = this.parentElement;
+      item.classList.toggle('open');
+    });
+  });
+
+  // --- Fade-in on scroll (Intersection Observer) ---
+  var fadeEls = document.querySelectorAll('.fade-in');
+  if (fadeEls.length > 0 && 'IntersectionObserver' in window) {
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    fadeEls.forEach(function(el) { observer.observe(el); });
+  }
+
+  // --- Smooth scroll for anchor links ---
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+    anchor.addEventListener('click', function(e) {
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+
+  // --- Contact form submission (demo) ---
+  var contactForm = document.querySelector('.contact-form');
+  if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      var btn = this.querySelector('.btn');
+      var originalText = btn.textContent;
+      btn.textContent = '✓ 已发送，将尽快联系您';
+      btn.style.background = '#4CAF50';
+      btn.style.color = '#fff';
+      setTimeout(function() {
+        btn.textContent = originalText;
+        btn.style.background = '';
+        btn.style.color = '';
+        contactForm.reset();
+      }, 3000);
+    });
+  }
+
+});
+</script>
+</body>
+</html>
+
+
+
+
+
+
