@@ -1,0 +1,45 @@
+﻿================================================================
+网站部署指南 · 5分钟上线 ifazi.com
+================================================================
+
+你只需要一个浏览器，不需要任何技术。
+
+第一步：注册 Netlify（免费）
+─────────────────────────────────────────────
+1. 浏览器打开 https://app.netlify.com/signup
+2. 选择 "Sign up with GitHub / Google / Email" 任一方式注册
+3. 注册成功后进入控制台
+
+第二步：上传网站
+─────────────────────────────────────────────
+1. 在 Netlify 控制台，找到 "Sites" 页面
+2. 找到 "Drag and drop your site folder here" 区域
+3. 将电脑上的 "website" 文件夹（C:\Users\Elsa Jia\Documents\律师\website）
+   拖拽到网页上那个虚线框内
+4. 等待几秒钟，Netlify 会生成一个类似 https://xxx.netlify.app 的临时链接
+5. 点击这个链接，确认网站可以正常访问
+
+第三步：绑定域名 ifazi.com
+─────────────────────────────────────────────
+1. 在 Netlify 进入 Site settings → Domain management
+2. 点击 "Add custom domain"，输入 ifazi.com
+3. Netlify 会提示你在域名注册商处修改 DNS 设置
+4. 到你的域名注册商（如阿里云/腾讯云/GoDaddy/Namecheap 等）
+   修改 ifazi.com 的 DNS 记录为 Netlify 提供的 DNS 服务器地址
+5. DNS 生效后（通常几分钟到几小时），网站即通过 ifazi.com 访问
+
+第四步（推荐）：后续管理
+─────────────────────────────────────────────
+- 以后修改网站后，重新拖拽上传即可覆盖
+- 在 Netlify 可以设置HTTPS（免费自动）
+- 在 Domain management 可以设置重定向（如需 www → 根域名）
+
+================================================================
+
+TIPS：
+· 两个号码都在网站上了，客户打哪个都能联系到你
+· 英文版在 ifazi.com/en/，可以转发给外籍客户
+· 合作律师页面在 ifazi.com/for-lawyers.html，转给海外律师
+· PDF手册在 ifazi.com/Zhao-Haiying-Lawyer-Referral-Guide.pdf，可直接打印
+
+如果遇到问题，开个网页共享或截图给我看。
