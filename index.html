@@ -705,16 +705,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 });
-});
-// Smooth scroll for all anchor links
-document.querySelectorAll('a[href^=\
-  link.addEventListener('click', function(e) {
-    var id = this.getAttribute('href');
-    if (id === '#') return;
-    var el = document.querySelector(id);
-    if (el) { e.preventDefault(); el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
-  });
-});
 </script>
 </body>
 </html>
