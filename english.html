@@ -140,7 +140,7 @@ header.scrolled{box-shadow:0 2px 30px rgba(0,0,0,.08)}
 .hamburger.active span:nth-child(2){opacity:0}
 .hamburger.active span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
 @media(max-width:768px){
-.logo-sub{display:none}
+.desktop-only{display:none}
 .hamburger{display:flex}
   .nav-links{position:fixed;top:72px;left:0;right:0;flex-direction:column;background:var(--white);padding:1.5rem 24px;gap:1.2rem;border-bottom:1px solid var(--gray-200);transform:translateY(-120%);opacity:0;transition:all .35s ease;box-shadow:var(--shadow-lg);align-items:stretch}
   .nav-links.open{transform:translateY(0);opacity:1}
@@ -282,7 +282,7 @@ footer{background:var(--navy);color:rgba(255,255,255,.6);padding:56px 0 24px}
       <img src="images/lantailogo.png" alt="Lantai Law Firm" class="logo-img">
       <span class="logo-text">
         <span class="logo-name">Zhao Haiying</span>
-        <span class="logo-sub">Beijing Lantai (Shanghai) Law Firm · ATTORNEY AT LAW</span>
+      <span class="logo-sub">Beijing Lantai (Shanghai) Law Firm<span class="desktop-only"> · ATTORNEY AT LAW</span></span>
       </span>
     </a>
     <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
