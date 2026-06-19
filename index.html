@@ -523,9 +523,10 @@ footer{background:var(--navy);color:rgba(255,255,255,.6);padding:56px 0 24px}
       <div class="fade-in-right">
         <h3>在线预约</h3>
         <p style="margin-bottom:1.5rem;">请简要描述您的情况和需求，我们会在收到后尽快联系您。</p>
-        <form class="contact-form" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+        <form class="contact-form" id="contactForm" action="https://api.web3forms.com/submit" method="POST" target="hidden_iframe">
           <input type="text" name="name" placeholder="您的姓名" required>
           <input type="hidden" name="access_key" value="cf6eede3-5ba7-4cbc-81ad-c5067db4349c">
+          <iframe name="hidden_iframe" style="display:none" onload="formSubmitted()"></iframe>
           <input type="tel" name="phone" placeholder="联系电话（手机/国际号码）" required>
           <input type="email" name="email" placeholder="邮箱（选填）">
           <select name="service">
@@ -669,15 +670,18 @@ document.addEventListener('DOMContentLoaded', function() {
   // Contact form
   if (contactForm) {
     contactForm.addEventListener("submit", function(e) {
-      e.preventDefault();
       var btn = contactForm.querySelector("button[type=submit]");
       btn.disabled = true; btn.textContent = "提交中...";
-      var data = new FormData(contactForm);
-      fetch("https://api.web3forms.com/submit", { method: "POST", body: data }).then(function(r) { return r.json(); }).then(function(j) {
-        if (j.success) { contactForm.style.display = "none"; formSuccess.classList.add("show"); }
-        else { alert("提交失败，请直接电话联系: 173 2109 9752"); btn.disabled = false; btn.textContent = "提交咨询"; }
-      }).catch(function() { alert("网络错误，请直接电话联系: 173 2109 9752"); btn.disabled = false; btn.textContent = "提交咨询"; });
     });
+  }
+
+  function formSubmitted() {
+    var btn = document.getElementById("contactForm").querySelector("button[type=submit]");
+    var fs = document.getElementById("formSuccess");
+    if (btn && btn.disabled) {
+      document.getElementById("contactForm").style.display = "none";
+      if (fs) fs.classList.add("show");
+    }
   }
 
 
