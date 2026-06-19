@@ -681,6 +681,14 @@ footer{background:var(--navy);color:rgba(255,255,255,.6);padding:56px 0 24px}
 </nav>
 
 <script>
+function formSubmitted() {
+  var btn = document.getElementById("contactForm").querySelector("button[type=submit]");
+  var fs = document.getElementById("formSuccess");
+  if (btn && btn.disabled) {
+    document.getElementById("contactForm").style.display = "none";
+    if (fs) fs.classList.add("show");
+  }
+}
 document.addEventListener('DOMContentLoaded', function() {
   // --- 语言自动检测 ---
   // 如果用户之前手动选择过语言，尊重选择
