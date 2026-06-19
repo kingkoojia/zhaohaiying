@@ -1,0 +1,26 @@
+﻿# Node
+node_modules/
+npm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Deploy temp
+deploy_check*.html
+deployed_check*.html
+verify*.html
+deploy_final.html
+index_fixed*.html
+old_js.txt
+worker_current.js
+_worker_current.js
+server.js
+*.zip
+deployed_now.html
+
+# No need to track index_fixed2 separately

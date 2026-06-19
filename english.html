@@ -7,6 +7,10 @@
 <meta name="description" content="Attorney Zhao Haiying, based in Shanghai Bund, specializes in cross-border civil legal services: inheritance for overseas Chinese, asset liquidation and fund transfer for foreign nationals, cross-border family law, and international estate planning.">
 <meta name="keywords" content="Shanghai lawyer, cross-border inheritance, foreigner selling property China, overseas Chinese inheritance, fund transfer out of China, international estate planning">
 <link rel="canonical" href="https://zhaohaiyinglawyer.com/en/">
+<link rel="alternate" hreflang="zh-CN" href="https://zhaohaiyinglvshi.com/">
+<link rel="alternate" hreflang="en" href="https://zhaohaiyinglvshi.com/english.html">
+<link rel="alternate" hreflang="x-default" href="https://zhaohaiyinglvshi.com/">
+<meta name="robots" content="index, follow">
 
 <script type="application/ld+json">
 {
@@ -24,6 +28,39 @@
   "image": "images/lawyerPic.jpg",
   "areaServed": ["China","United States","Canada","Australia","Japan","Germany","United Kingdom","France","Singapore","Hong Kong","Taiwan"],
   "knowsAbout": ["Cross-Border Inheritance","Asset Transfer","International Family Law","Estate Planning"]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can I inherit Chinese property while living overseas?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. You can issue a power of attorney in your country of residence, have it notarized and authenticated by the Chinese consulate, then send it to your lawyer in China to handle the inheritance notarization and property registration on your behalf." }
+    },
+    {
+      "@type": "Question",
+      "name": "How can a foreign national transfer funds out of China after selling property?",
+      "acceptedAnswer": { "@type": "Answer", "text": "After selling Chinese property, foreign nationals must first pay applicable taxes, then apply to a bank for foreign exchange purchase and cross-border remittance using the tax clearance certificate, sales contract, and identity documents." }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does cross-border inheritance take?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Timelines vary by complexity. Generally, inheritance notarization takes 1-2 months, and property registration takes about 1 month. If overseas factors are involved, the process may extend to 3-6 months." }
+    },
+    {
+      "@type": "Question",
+      "name": "Are there taxes on inheriting Chinese property?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Inheritance is not considered taxable income in China, so heirs generally do not pay inheritance tax or personal income tax on inherited assets. The main costs are notarization fees and property registration fees." }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Apostille accepted for inheritance documents in China now?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Since November 7, 2023, China has acceded to the Hague Apostille Convention. Documents from Apostille member countries such as the US, UK, Canada, Australia, Japan, and most EU countries only need an Apostille, no longer requiring Chinese consular legalization." }
+    }
+  ]
 }
 </script>
 <style>
@@ -95,7 +132,7 @@ header.scrolled{box-shadow:0 2px 30px rgba(0,0,0,.08)}
 .nav-cta{background:var(--navy);color:var(--white)!important;padding:8px 20px!important;border-radius:var(--radius);font-weight:600}
 .nav-cta::after{display:none!important}
 .nav-cta:hover{background:var(--navy-light)!important}
-.lang-switch{font-size:.8rem;color:var(--gray-600);border-left:1px solid var(--gray-200);padding-left:1rem}
+      <span class="lang-switch"><a href="/" onclick="document.cookie='lang_choice=zh;path=/;max-age=31536000'">中文</a></span>
 .lang-switch a:hover{color:var(--gold)}
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
 .hamburger span{display:block;width:24px;height:2px;background:var(--navy);transition:var(--transition);border-radius:1px}
@@ -231,6 +268,16 @@ footer{background:var(--navy);color:rgba(255,255,255,.6);padding:56px 0 24px}
 }
 @media(min-width:769px){.mobile-bar{display:none}}
 </style>
+/* Article cards */
+.article-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px}
+.article-card{background:var(--white);border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow);border:1px solid var(--gray-200);transition:all .3s ease}
+.article-card:hover{box-shadow:var(--shadow-lg);transform:translateY(-3px)}
+.article-card-body{padding:1.8rem}
+.article-card .tag{display:inline-block;background:var(--cream);color:var(--navy);font-size:.7rem;padding:2px 10px;border-radius:100px;margin-bottom:.6rem;font-weight:500}
+.article-card h3{font-size:1.05rem;margin-bottom:.5rem;color:var(--navy)}
+.article-card h3 a{color:var(--navy)}
+.article-card h3 a:hover{color:var(--gold)}
+.article-card p{font-size:.85rem;margin-bottom:0}
 </head>
 <body>
 <header id="header">
@@ -252,7 +299,7 @@ footer{background:var(--navy);color:rgba(255,255,255,.6);padding:56px 0 24px}
       <a href="#faq">FAQ</a>
       <a href="#contact">Contact</a>
       <a href="#contact" class="nav-cta">Free Consultation</a>
-      <span class="lang-switch"><a href="index.html">中文</a></span>
+      <span class="lang-switch"><a href="index.html" onclick="document.cookie='lang_choice=zh;path=/;max-age=31536000'">中文</a></span>
     </nav>
   </div>
 </header>
@@ -311,7 +358,7 @@ footer{background:var(--navy);color:rgba(255,255,255,.6);padding:56px 0 24px}
 <section class="section section-cream" id="about">
   <div class="container">
     <div class="about-grid">
-      <div class="about-image fade-in-left"><img src="images/lawyerPic.jpg" alt="Zhao Haiying"></div>
+      <div class="about-image fade-in-left"><img src="images/lawyerPic.jpg" alt="Zhao Haiying" loading="lazy"></div>
       <div class="about-text fade-in-right">
         <h2>About Zhao Haiying</h2>
         <p>Attorney Zhao Haiying practices at the Shanghai Bund with over a decade of experience in cross-border civil law. She has handled more than 300 cross-border cases involving inheritance, asset liquidation, and fund repatriation for clients around the world.</p>
@@ -396,6 +443,37 @@ footer{background:var(--navy);color:rgba(255,255,255,.6);padding:56px 0 24px}
 </section>
 
 <section class="section" id="faq">
+
+<!-- Articles -->
+<section class="section section-cream" id="articles">
+  <div class="container">
+    <div class="section-title fade-in"><h2>Legal Articles</h2><p>Practical knowledge about cross-border asset matters</p></div>
+    <div class="article-grid">
+      <div class="article-card fade-in">
+        <div class="article-card-body">
+          <span class="tag">Inheritance</span>
+          <h3><a href="articles.html">Complete Guide to Cross-Border Inheritance in China</a></h3>
+          <p>A comprehensive overview of the inheritance process for overseas Chinese and foreign nationals inheriting assets in China.</p>
+        </div>
+      </div>
+      <div class="article-card fade-in">
+        <div class="article-card-body">
+          <span class="tag">Fund Transfer</span>
+          <h3><a href="fund-transfer.html">Asset Liquidation & Fund Repatriation for Foreign Nationals</a></h3>
+          <p>Understanding the tax clearance, forex purchase, and cross-border remittance process for foreign nationals selling Chinese assets.</p>
+        </div>
+      </div>
+      <div class="article-card fade-in">
+        <div class="article-card-body">
+          <span class="tag">Estate Planning</span>
+          <h3><a href="estate-planning.html">Dual-Jurisdiction Wealth Succession Planning</a></h3>
+          <p>Key considerations for cross-border families with assets in China and abroad, including will planning and trust structures.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
   <div class="container">
     <div class="section-title fade-in"><h2>Frequently Asked Questions</h2></div>
     <div class="faq-list">
@@ -416,6 +494,14 @@ footer{background:var(--navy);color:rgba(255,255,255,.6);padding:56px 0 24px}
         <div class="faq-answer"><p>Inheritance is not considered taxable income in China, so heirs generally do not pay inheritance tax or personal income tax on inherited assets. The main costs are notarization fees (based on property value) and property registration fees (approximately RMB 80-800). Taxes apply if the inherited property is later sold.</p></div>
       </div>
     </div>
+      <div class="faq-item fade-in">
+        <div class="faq-question">Do I need an Apostille for inheritance documents from abroad?</div>
+        <div class="faq-answer"><p>Since November 7, 2023, China has acceded to the Hague Apostille Convention. Documents from Apostille member countries only need a simple Apostille certification and no longer require consular legalization. This significantly streamlines cross-border inheritance document processing for documents from the US, UK, Canada, Australia, Japan, South Korea, and most EU countries.</p></div>
+      </div>
+      <div class="faq-item fade-in">
+        <div class="faq-question">Can I handle everything remotely, without traveling to China?</div>
+        <div class="faq-answer"><p>In most cases, yes. Inheritance notarization, property registration, and many other legal procedures can be handled through a power of attorney issued overseas. You can sign the POA at the Chinese consulate in your country or have it notarized locally with an Apostille. Your lawyer in China can then handle the entire process on your behalf without you needing to travel.</p></div>
+      </div>
   </div>
 </section>
 
@@ -523,6 +609,14 @@ footer{background:var(--navy);color:rgba(255,255,255,.6);padding:56px 0 24px}
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
+  // --- Language auto-detect ---
+  if (!document.cookie.match(/(^| )lang_choice=/)) {
+    var userLang = navigator.language || navigator.userLanguage;
+    // Chinese users get redirected to Chinese version
+    if (userLang && userLang.substr(0,2) === 'zh' && !window.location.href.match(/index\.html/)) {
+      window.location.href = '/';
+    }
+  }
   var header = document.getElementById('header');
   var hamburger = document.querySelector('.hamburger');
   var navLinks = document.querySelector('.nav-links');

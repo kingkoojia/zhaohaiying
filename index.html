@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+﻿﻿<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
@@ -7,6 +7,12 @@
 <meta name="description" content="赵海英律师，执业于上海外滩，专注涉外民事法律服​务：外籍人士/海外华人继承国内遗产、在华资产变现与资金出境、跨境婚姻家事、涉外遗嘱与财富传承规划。预约免费咨询：173 2109 9752">
 <meta name="keywords" content="上海涉外律师,涉外继承律师,华侨继承国内房产,外籍人士继承中国遗产,外国人卖房资金出境,跨境婚姻律师,涉外遗嘱">
 <link rel="canonical" href="https://zhaohaiyinglvshi.com/">
+<link rel="alternate" hreflang="zh-CN" href="https://zhaohaiyinglvshi.com/">
+<link rel="alternate" hreflang="en" href="https://zhaohaiyinglvshi.com/english.html">
+<link rel="alternate" hreflang="x-default" href="https://zhaohaiyinglvshi.com/">
+<link rel="preconnect" href="https://api.web3forms.com">
+<meta name="robots" content="index, follow">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27><rect width=%2764%27 height=%2764%27 rx=%278%27 fill=%27%230f1b2d%27/><text x=%2750%%25%27 y=%2752%%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%23c9a84c%27 font-size=%2736%27 font-family=%27Georgia,serif%27 font-weight=%27bold%27>法</text></svg>">
 
 <!-- JSON-LD Structured Data -->
 <script type="application/ld+json">
@@ -32,6 +38,39 @@
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "首页", "item": "https://zhaohaiyinglvshi.com" }]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "华侨继承国内房产需要什么手续？",
+      "acceptedAnswer": { "@type": "Answer", "text": "华侨继承国内房产通常需要办理继承权公证（可远程委托），然后凭公证书到不动产登记中心办理过户登记。如继承人本人无法回国，可以通过领事认证的委托书委托国内代理人办理。" }
+    },
+    {
+      "@type": "Question",
+      "name": "外籍人士卖房后资金怎么汇出中国？",
+      "acceptedAnswer": { "@type": "Answer", "text": "外籍人士出售中国房产后，需先完税（增值税、所得税等），然后凭完税证明、房产交易合同、身份证明等材料向银行申请购汇汇出。根据现行外汇管理规定，只要资金来源合法、完税手续齐全，可以一次性汇出。" }
+    },
+    {
+      "@type": "Question",
+      "name": "人在国外，能否委托律师办理中国的继承？",
+      "acceptedAnswer": { "@type": "Answer", "text": "可以。您可以在所在国出具委托书，经当地公证及中国驻该国使领馆认证后，寄回国内委托律师代理。律师可以全程代为办理继承权公证、不动产过户等程序。远程协作模式已非常成熟。" }
+    },
+    {
+      "@type": "Question",
+      "name": "涉外继承一般需要多长时间？",
+      "acceptedAnswer": { "@type": "Answer", "text": "时间因案件复杂度而异。一般情况下，继承权公证约1-2个月，不动产登记约1个月。如果涉及境外因素（如证明材料需经领事认证），可能延长至3-6个月。" }
+    },
+    {
+      "@type": "Question",
+      "name": "外籍人士继承国内房产要交哪些税？",
+      "acceptedAnswer": { "@type": "Answer", "text": "继承在中国不属于应税所得，继承人通常不需要缴纳个人所得税或遗产税。主要费用包括继承权公证费和不动产登记费。如涉及后续出售则会产生增值税、个人所得税等。" }
+    }
+  ]
 }
 </script>
 
@@ -276,6 +315,16 @@ footer{background:var(--navy);color:rgba(255,255,255,.6);padding:56px 0 24px}
 }
 @media(min-width:769px){.mobile-bar{display:none}}
 </style>
+/* Article cards */
+.article-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px}
+.article-card{background:var(--white);border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow);border:1px solid var(--gray-200);transition:all .3s ease}
+.article-card:hover{box-shadow:var(--shadow-lg);transform:translateY(-3px)}
+.article-card-body{padding:1.8rem}
+.article-card .tag{display:inline-block;background:var(--cream);color:var(--navy);font-size:.7rem;padding:2px 10px;border-radius:100px;margin-bottom:.6rem;font-weight:500}
+.article-card h3{font-size:1.05rem;margin-bottom:.5rem;color:var(--navy)}
+.article-card h3 a{color:var(--navy)}
+.article-card h3 a:hover{color:var(--gold)}
+.article-card p{font-size:.85rem;margin-bottom:0}
 </head>
 </head>
 <body>
@@ -299,7 +348,7 @@ footer{background:var(--navy);color:rgba(255,255,255,.6);padding:56px 0 24px}
       <a href="#faq">常见问题</a>
       <a href="#contact">联系</a>
       <a href="#contact" class="nav-cta">免费咨询</a>
-      <span class="lang-switch"><a href="english.html">EN</a></span>
+      <span class="lang-switch"><a href="english.html" onclick="document.cookie='lang_choice=en;path=/;max-age=31536000'">EN</a></span>
     </nav>
   </div>
 </header>
@@ -361,7 +410,7 @@ footer{background:var(--navy);color:rgba(255,255,255,.6);padding:56px 0 24px}
 <section class="section section-cream" id="about">
   <div class="container">
     <div class="about-grid">
-      <div class="about-image fade-in-left"><img src="images/lawyerPic.jpg" alt="赵海英律师"></div>
+      <div class="about-image fade-in-left"><img src="images/lawyerPic.jpg" alt="赵海英律师" loading="lazy"></div>
       <div class="about-text fade-in-right">
         <h2>关于赵海英律师</h2>
         <p>赵海英律师，执业于上海外滩，拥有十年以上涉外民事法律服务经验，累计办理涉外案件逾300件。深谙中国涉外法律程序，尤其擅长处理涉及跨国资产处置、继承、资金出境的复杂案件。</p>
@@ -449,6 +498,44 @@ footer{background:var(--navy);color:rgba(255,255,255,.6);padding:56px 0 24px}
 </section>
 
 <!-- FAQ -->
+
+<!-- Articles -->
+<section class="section section-cream" id="articles">
+  <div class="container">
+    <div class="section-title fade-in"><h2>法律文章</h2><p>涉外法律实务知识，帮助您了解跨境资产处置的关键问题</p></div>
+    <div class="article-grid">
+      <div class="article-card fade-in">
+        <div class="article-card-body">
+          <span class="tag">涉外继承</span>
+          <h3><a href="https://zhaohaiyinglvshi.com/article-inheritance-guide">涉外继承全流程指南</a></h3>
+          <p>海外华人、华侨、外籍人士继承中国境内遗产的完整流程详解，包括继承权公证、不动产登记、股权继承等核心环节。</p>
+        </div>
+      </div>
+      <div class="article-card fade-in">
+        <div class="article-card-body">
+          <span class="tag">资金出境</span>
+          <h3><a href="https://zhaohaiyinglvshi.com/fund-transfer">外籍人士在华资产变现与资金出境</a></h3>
+          <p>外籍人士出售中国房产、退出股权后的资金合规出境路径解析，涉及税务申报、购汇流程、跨境汇款等关键步骤。</p>
+        </div>
+      </div>
+      <div class="article-card fade-in">
+        <div class="article-card-body">
+          <span class="tag">财富传承</span>
+          <h3><a href="https://zhaohaiyinglvshi.com/estate-planning">双法域财富传承规划实务</a></h3>
+          <p>为涉美、涉加、涉日等跨境家庭提供遗嘱规划、家族信托与财富传承架构设计的实务要点与常见误区。</p>
+        </div>
+      </div>
+      <div class="article-card fade-in">
+        <div class="article-card-body">
+          <span class="tag">婚姻家事</span>
+          <h3><a href="https://zhaohaiyinglvshi.com/cross-border-family">跨境婚姻家事法律问题解析</a></h3>
+          <p>跨国离婚、抚养权争议、跨境财产分割、离婚判决在境外（美/加/澳/日等）的承认与执行实务。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="section" id="faq">
   <div class="container">
     <div class="section-title fade-in"><h2>常见问题</h2><p>您可能关心的涉外法律问题</p></div>
@@ -472,6 +559,14 @@ footer{background:var(--navy);color:rgba(255,255,255,.6);padding:56px 0 24px}
       <div class="faq-item fade-in">
         <div class="faq-question">外籍人士/华侨继承国内房产要交哪些税？</div>
         <div class="faq-answer"><p>继承在中国不属于应税所得，因此继承人通常不需要缴纳个人所得税或遗产税。主要费用包括继承权公证费（按房产评估价的一定比例收取）、不动产登记费（约80-800元）等。如涉及后续出售则会产生增值税、个人所得税等。具体情况因城市和房产性质有所不同。</p></div>
+      <div class="faq-item fade-in">
+        <div class="faq-question">涉外继承是否需要海牙认证（Apostille）？</div>
+        <div class="faq-answer"><p>2023年11月7日起，中国正式加入《海牙取消认证公约》。海外出具的继承相关文件（如委托书、死亡证明、亲属关系证明等）只需办理海牙认证（Apostille），无需再经中国驻外使领馆领事认证，显著简化了跨境继承的文件流转程序。日本、韩国、美国、英国、澳大利亚等主要国家均为海牙公约成员国。</p></div>
+      </div>
+      <div class="faq-item fade-in">
+        <div class="faq-question">人在国外如何办理委托律师的公证手续？</div>
+        <div class="faq-answer"><p>有两种常见方式：1）在所在国的中国驻外使领馆签署委托书并办理公证（建议优先选择）；2）在所在国当地公证处公证，再经该国外交部门或授权机构加签海牙认证（Apostille）。完成后将委托书寄回国内，律师凭此代您办理相关法律程序。视频见证方式也在部分场景中被认可。</p></div>
+      </div>
       </div>
     </div>
   </div>
@@ -589,6 +684,15 @@ footer{background:var(--navy);color:rgba(255,255,255,.6);padding:56px 0 24px}
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
+  // --- 语言自动检测 ---
+  // 如果用户之前手动选择过语言，尊重选择
+  if (!document.cookie.match(/(^| )lang_choice=/)) {
+    var userLang = navigator.language || navigator.userLanguage;
+    // 英文用户(含en-US/en-GB等)自动跳转到英文版
+    if (userLang && userLang.substr(0,2) === 'en' && !window.location.href.match(/english\.html/)) {
+      window.location.href = 'english.html';
+    }
+  }
   var header = document.getElementById('header');
   var hamburger = document.querySelector('.hamburger');
   var navLinks = document.querySelector('.nav-links');
@@ -708,3 +812,4 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 </body>
 </html>
+>>>>>>> 2fa3f29 (Optimize: SEO hreflang, FAQ schema, articles section, language auto-detect, image lazy loading, cleanup)
