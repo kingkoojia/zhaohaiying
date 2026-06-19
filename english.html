@@ -245,7 +245,7 @@ footer{background:var(--navy);color:rgba(255,255,255,.6);padding:56px 0 24px}
 .fab-btn.phone{background:linear-gradient(135deg,#4CAF50,#45a049)}
 .fab-btn.wechat{background:linear-gradient(135deg,#07C160,#06ad56)}
 .fab-btn:hover{transform:scale(1.1);box-shadow:0 6px 24px rgba(15,27,45,.3)}
-@media(max-width:768px){.fab{bottom:16px;right:16px}.fab-btn{width:50px;height:50px;font-size:1.2rem}}
+@media(max-width:768px){.fab{bottom:72px;right:16px}.fab-btn{width:50px;height:50px;font-size:1.2rem}}
 .form-success{display:none;text-align:center;padding:2rem}
 .form-success.show{display:block}
 .form-success .check{font-size:3rem;margin-bottom:1rem;display:block}
@@ -594,14 +594,15 @@ footer{background:var(--navy);color:rgba(255,255,255,.6);padding:56px 0 24px}
 
 <div class="fab">
   <a class="fab-btn phone" href="tel:17321099752" aria-label="Call">&#9742;</a>
-  <a class="fab-btn wechat" href="#contact" aria-label="WeChat">&#128172;</a>
+  <a class="fab-btn wechat" id="wechatBtn" href="javascript:void(0)" aria-label="WeChat">&#128172;</a>
 </div>
 <nav class="mobile-bar">
   <a href="#hero" class="active"><span class="bar-icon">&#127968;</span>Home</a>
+  <a href="#about"><span class="bar-icon">&#9878;</span>Lawyer</a>
   <a href="#services"><span class="bar-icon">&#128214;</span>Services</a>
   <a href="#faq"><span class="bar-icon">&#128161;</span>FAQ</a>
+  <a href="#contact"><span class="bar-icon">&#128222;</span>Contact</a>
   <a href="index.html" onclick="document.cookie='lang_choice=zh;path=/;max-age=31536000'"><span class="bar-icon">&#127760;</span>中文</a>
-  <a href="tel:17321099752" class="cta-bar"><span class="bar-icon">&#9742;</span>Call</a>
 </nav>
 
 <script>
@@ -640,6 +641,24 @@ document.addEventListener('DOMContentLoaded', function() {
       this.classList.add('active');
     });
   });
+  // Click to copy WeChat ID
+  var wechatBtn = document.getElementById('wechatBtn');
+  if (wechatBtn) {
+    wechatBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      var input = document.createElement('input');
+      input.value = '17321099752';
+      document.body.appendChild(input);
+      input.select();
+      document.execCommand('copy');
+      document.body.removeChild(input);
+      var toast = document.createElement('div');
+      toast.textContent = 'WeChat ID copied';
+      toast.style.cssText = 'position:fixed;bottom:80px;left:50%;transform:translateX(-50%);background:rgba(0,0,0,.8);color:#fff;padding:10px 24px;border-radius:8px;font-size:.9rem;z-index:9999;transition:opacity .3s ease';
+      document.body.appendChild(toast);
+      setTimeout(function() { toast.style.opacity = '0'; setTimeout(function() { document.body.removeChild(toast); }, 300); }, 1500);
+    });
+  }
   document.querySelectorAll('.faq-question').forEach(function(q) {
     q.addEventListener('click', function() { this.parentElement.classList.toggle('open'); });
   });
