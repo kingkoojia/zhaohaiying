@@ -284,12 +284,6 @@ footer{background:var(--navy);color:rgba(255,255,255,.6);padding:56px 0 24px}
 .fab-btn:hover{transform:scale(1.1);box-shadow:0 6px 24px rgba(15,27,45,.3)}
 @media(max-width:768px){.fab{bottom:16px;right:16px}.fab-btn{width:50px;height:50px;font-size:1.2rem}}
 
-/* Scroll top */
-.scroll-top{position:fixed;bottom:90px;right:24px;z-index:999;width:44px;height:44px;border-radius:50%;background:var(--white);border:1px solid var(--gray-200);box-shadow:var(--shadow);display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:1.2rem;color:var(--navy);opacity:0;transform:translateY(20px);transition:all .3s ease;pointer-events:none}
-.scroll-top.visible{opacity:1;transform:translateY(0);pointer-events:auto}
-.scroll-top:hover{background:var(--navy);color:var(--white);border-color:var(--navy)}
-@media(max-width:768px){.scroll-top{right:16px;width:40px;height:40px;font-size:1rem}}
-
 /* Form success */
 .form-success{display:none;text-align:center;padding:2rem}
 .form-success.show{display:block}
@@ -670,8 +664,6 @@ footer{background:var(--navy);color:rgba(255,255,255,.6);padding:56px 0 24px}
   <a class="fab-btn phone" href="tel:17321099752" aria-label="电话咨询">&#9742;</a>
   <a class="fab-btn wechat" href="#contact" aria-label="微信联系">&#128172;</a>
 </div>
-<div class="scroll-top" id="scrollTop" aria-label="返回顶部">&#8593;</div>
-
 <!-- Mobile Bottom Bar -->
 <nav class="mobile-bar">
   <a href="#hero" class="active"><span class="bar-icon">&#127968;</span>首页</a>
@@ -703,14 +695,12 @@ document.addEventListener('DOMContentLoaded', function() {
   var header = document.getElementById('header');
   var hamburger = document.querySelector('.hamburger');
   var navLinks = document.querySelector('.nav-links');
-  var scrollTop = document.getElementById('scrollTop');
   var contactForm = document.getElementById('contactForm');
   var formSuccess = document.getElementById('formSuccess');
 
   // Header scroll
   window.addEventListener('scroll', function() {
     header.classList.toggle('scrolled', window.scrollY > 20);
-    scrollTop.classList.toggle('visible', window.scrollY > 500);
   });
 
   // Mobile menu
