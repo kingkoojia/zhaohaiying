@@ -69,12 +69,31 @@ footer{background:var(--navy);color:var(--white);padding:30px 0 20px}
 .footer-col a:hover{color:var(--gold)}
 .footer-bottom{text-align:center;padding-top:20px;border-top:1px solid rgba(255,255,255,.1);font-size:.75rem;color:var(--gray-300)}
 @media(max-width:768px){.nav-links{display:none}.hamburger{display:flex}.article-header h1{font-size:1.4rem}.article-body{padding:30px 16px}.footer-grid{grid-template-columns:1fr;gap:24px}}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
+.hamburger span{display:block;width:24px;height:2px;background:var(--navy);transition:var(--transition);border-radius:1px}
+@media(max-width:768px){.hamburger{display:flex}.nav-links{position:fixed;top:70px;left:0;right:0;flex-direction:column;background:var(--white);padding:1rem;box-shadow:0 10px 40px rgba(0,0,0,.1);z-index:999}.nav-links a{padding:12px 0;border-bottom:1px solid var(--gray-100)}.lang-switch{border-left:none;padding-left:0;border-top:1px solid var(--gray-200);padding-top:1rem}}
+.mobile-bar{position:fixed;bottom:0;left:0;right:0;z-index:998;display:flex;background:var(--white);border-top:1px solid var(--gray-200);box-shadow:0 -4px 20px rgba(0,0,0,.08);padding:8px 0;padding-bottom:max(8px,env(safe-area-inset-bottom))}
+.mobile-bar a{flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;font-size:.65rem;color:var(--gray-600);padding:4px 0}
+.mobile-bar a .bar-icon{font-size:1.1rem}
+.mobile-bar a.active{color:var(--gold)}
+body{padding-bottom:60px}
+@media(min-width:769px){.mobile-bar{display:none}}
 </style>
 </head>
 <body>
 <header><div class="nav-inner">
-<a href="index.html" class="logo"><img src="images/lantailogo.png" alt="兰台律师事务所" class="logo-img"><span class="logo-text"><span class="logo-name">赵海英律师</span><span class="logo-sub">北京市兰台（上海）律师事务所</span></span></a>
-<nav class="nav-links"><a href="index.html">首页</a><a href="index.html#services">服务</a><a href="index.html#about">关于</a><a href="index.html#faq">常见问题</a><a href="index.html#contact" class="nav-cta">免费咨询</a><span class="lang-switch"><a href="english.html">EN</a></span></nav>
+<a href="index.html" class="logo"><img src="images/lantailogo.png" alt="兰台律师事务所" class="logo-img"><span class="logo-text"><span class="logo-name">赵海英律师</span><span class="logo-sub">兰台（上海）律师事务所</span></span></a>
+      <nav class="nav-links">
+        <a href="index.html">首页</a>
+        <a href="index.html#services">服务</a>
+        <a href="index.html#about">关于</a>
+        <a href="index.html#cases">案例</a>
+        <a href="index.html#faq">常见问题</a>
+        <a href="index.html#testimonials">评价</a>
+        <a href="index.html#contact">联系</a>
+        <a href="index.html#contact" class="nav-cta">免费咨询</a>
+        <span class="lang-switch"><a href="english.html" onclick="document.cookie='lang_choice=en;path=/;max-age=31536000'">EN</a></span>
+      </nav>
 </div></header>
 <div class="article-header"><div class="container"><span class="tag">涉外继承</span>
 <h1>涉外继承全流程指南</h1>
@@ -145,11 +164,20 @@ footer{background:var(--navy);color:var(--white);padding:30px 0 20px}
 </div></div>
 <footer><div class="container">
 <div class="footer-grid">
-<div class="footer-brand"><div class="logo"><span class="logo-text"><span class="logo-name" style="color:var(--white)">赵海英律师</span><span class="logo-sub" style="color:var(--gray-300)">北京市兰台（上海）律师事务所</span></span></div><p>专注涉外民事法律服&#8203;务，为海外华人和在华外籍人士提供专业的跨境资产处置解决方案。</p></div>
+<div class="footer-brand"><div class="logo"><span class="logo-text"><span class="logo-name" style="color:var(--white)">赵海英律师</span><span class="logo-sub" style="color:var(--gray-300)">兰台（上海）律师事务所</span></span></div><p>专注涉外民事法律服&#8203;务，为海外华人和在华外籍人士提供专业的跨境资产处置解决方案。</p></div>
 <div class="footer-col"><h5>服务</h5><a href="index.html#services">涉外继承</a><a href="index.html#services">资产变现与资金出境</a><a href="index.html#services">跨境婚姻家事</a><a href="index.html#services">涉外遗嘱与财富传承</a></div>
 <div class="footer-col"><h5>联系</h5><a href="index.html#contact">预约咨询</a><a href="tel:17321099752">&#9742; 173 2109 9752</a><a>&#128205; 上海市黄浦区中山东二路88号外滩SOHO C座1001-1002室</a><a>&#9993; zhaohaiying@lantai.cn</a></div>
 </div>
-<div class="footer-bottom">&copy; 2026 赵海英律师 · 版权所有 · 北京市兰台（上海）律师事务所</div>
+<div class="footer-bottom">&copy; 2026 赵海英律师 · 版权所有 · 兰台（上海）律师事务所</div>
 </div></footer>
+<nav class="mobile-bar">
+  <a href="index.html"><span class="bar-icon">&#127968;</span>首页</a>
+  <a href="index.html#about"><span class="bar-icon">&#9878;</span>律师</a>
+  <a href="index.html#services"><span class="bar-icon">&#128214;</span>服务</a>
+  <a href="index.html#faq"><span class="bar-icon">&#128161;</span>常见问题</a>
+  <a href="index.html#contact"><span class="bar-icon">&#128222;</span>联系</a>
+  <a href="english.html" onclick="document.cookie='lang_choice=en;path=/;max-age=31536000'"><span class="bar-icon">&#127760;</span>EN</a>
+</nav>
 </body>
 </html>
+
