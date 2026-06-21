@@ -24,3 +24,8 @@ server.js
 deployed_now.html
 
 # No need to track index_fixed2 separately
+
+# Credentials
+.git-credentials
+_netrc
+.netrc
