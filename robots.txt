@@ -1,3 +1,4 @@
 ﻿User-agent: *
 Allow: /
+Disallow: /seo-report-
 Sitemap: https://zhaohaiyinglvshi.com/sitemap.xml
