@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
@@ -69,7 +69,49 @@ footer{background:var(--navy);color:var(--white);padding:30px 0 20px}
 
 .article-meta{display:flex;align-items:center;gap:12px;justify-content:center;margin-top:10px;flex-wrap:wrap}
 .pub-date{font-size:.8rem;color:rgba(255,255,255,.6)}
-</style>
+
+/* ==========================================
+   🖥️ 针对小电脑屏幕、中等显示器的顶栏防错位修复
+   ========================================== */
+@media (min-width: 769px) and (max-width: 1100px) {
+  .nav-inner {
+    padding: 0 16px;
+    height: 64px;
+  }
+  .nav-links {
+    gap: 1rem;
+  }
+  .nav-links a {
+    font-size: 0.85rem;
+  }
+  .logo {
+    gap: 6px;
+    font-size: 1.1rem;
+  }
+  .logo-name {
+    font-size: 1.1rem;
+  }
+  .nav-cta {
+    padding: 6px 14px !important;
+    font-size: 0.85rem;
+  }
+  .lang-switch {
+    padding-left: 0.6rem;
+  }
+}
+
+@media (min-width: 769px) {
+  .nav-inner {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    align-items: center !important;
+  }
+  .nav-links {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    flex-shrink: 1;
+  }
+}</style>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",

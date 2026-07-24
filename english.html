@@ -311,7 +311,49 @@ footer{background:var(--navy);color:rgba(255,255,255,.6);padding:56px 0 24px}
 @media(max-width:768px){
   .svc-subtitle{font-size:.82rem!important;margin:-1rem auto 1.5rem!important}
 }
-</style>
+
+/* ==========================================
+   🖥️ 针对小电脑屏幕、中等显示器的顶栏防错位修复
+   ========================================== */
+@media (min-width: 769px) and (max-width: 1100px) {
+  .nav-inner {
+    padding: 0 16px;
+    height: 64px;
+  }
+  .nav-links {
+    gap: 1rem;
+  }
+  .nav-links a {
+    font-size: 0.85rem;
+  }
+  .logo {
+    gap: 6px;
+    font-size: 1.1rem;
+  }
+  .logo-name {
+    font-size: 1.1rem;
+  }
+  .nav-cta {
+    padding: 6px 14px !important;
+    font-size: 0.85rem;
+  }
+  .lang-switch {
+    padding-left: 0.6rem;
+  }
+}
+
+@media (min-width: 769px) {
+  .nav-inner {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    align-items: center !important;
+  }
+  .nav-links {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    flex-shrink: 1;
+  }
+}</style>
 
 <!-- BAIDU_TONGJI -->
 <script>
