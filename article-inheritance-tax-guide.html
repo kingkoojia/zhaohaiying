@@ -83,36 +83,45 @@ body{padding-bottom:60px}
 .pub-date{font-size:.8rem;color:rgba(255,255,255,.6)}
 
 /* ==========================================
-   🖥️ 针对小电脑屏幕、中等显示器的顶栏防错位修复
+   🖥️ 小电脑屏幕：顶栏两行布局（Logo在上，导航在下）
    ========================================== */
 @media (min-width: 769px) and (max-width: 1100px) {
   .nav-inner {
-    padding: 0 16px;
-    height: 64px;
-  }
-  .nav-links {
-    gap: 1rem;
-  }
-  .nav-links a {
-    font-size: 0.85rem;
+    flex-wrap: wrap !important;
+    height: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    gap: 6px 0;
   }
   .logo {
-    gap: 6px;
-    font-size: 1.1rem;
+    width: 100%;
+    justify-content: center;
   }
-  .logo-name {
-    font-size: 1.1rem;
+  .nav-links {
+    width: 100%;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap !important;
+  }
+  .nav-links a {
+    font-size: 0.82rem;
   }
   .nav-cta {
-    padding: 6px 14px !important;
-    font-size: 0.85rem;
+    padding: 5px 12px !important;
+    font-size: 0.82rem;
   }
   .lang-switch {
-    padding-left: 0.6rem;
+    padding-left: 1rem;
+  }
+  .hamburger {
+    display: none;
+  }
+  .hero {
+    padding-top: 100px !important;
   }
 }
 
-@media (min-width: 769px) {
+@media (min-width: 1101px) {
   .nav-inner {
     display: flex !important;
     flex-wrap: nowrap !important;
@@ -123,7 +132,8 @@ body{padding-bottom:60px}
     flex-wrap: nowrap !important;
     flex-shrink: 1;
   }
-}</style>
+}
+</style>
 <meta name="twitter:card" content="summary_large_image" />
 <script type="application/ld+json">
 {
