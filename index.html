@@ -2,6 +2,16 @@
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
+<!-- 浏览器全局对象兼容垫片，确保旧版浏览器不漏掉谷歌统计数据 -->
+<script>
+(function() {
+    if (typeof globalThis === 'object') return;
+    Object.defineProperty(Object.prototype, 'globalThis', {
+        get: function() { return this; },
+        configurable: true
+    });
+})();
+</script>
 <link rel="icon" type="image/x-icon" href="favicon.ico">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 <title>赵海英律师 · 上海涉外民商事服务 · 跨境继承 · 资产资金出境</title>
@@ -765,7 +775,7 @@ var _hmt = _hmt || [];
         <form class="contact-form" id="contactForm" action="https://api.web3forms.com/submit" method="POST" target="hidden_iframe">
           <input type="text" name="name" placeholder="您的姓名" required>
           <input type="hidden" name="access_key" value="cf6eede3-5ba7-4cbc-81ad-c5067db4349c">
-          <iframe name="hidden_iframe" style="display:none" onload="formSubmitted()"></iframe>
+          <iframe name="hidden_iframe" style="display:none"></iframe>
           <input type="tel" name="phone" placeholder="联系电话（手机/国际号码）" required>
           <input type="email" name="email" placeholder="邮箱（选填）">
           <select name="service">
