@@ -383,6 +383,79 @@ var _hmt = _hmt || [];
   gtag("js", new Date());
   gtag("config", "G-QZ7BL887VY");
 </script>
+<!-- 独家定制：修复小屏幕/笔记本电脑排版错位补丁 -->
+<style>
+/* ==========================================================================
+   关键断点：当屏幕宽度小于 1366像素（常见笔记本和缩放屏幕）时自动生效
+   ========================================================================== */
+@media screen and (max-width: 1366px) {
+
+    /* 🛠️ 修复 1：顶部导航栏文字重叠 */
+    /* 作用：缩小导航栏文字之间的间距，微调字号，给右侧“免费咨询”和“EN”腾出空间 */
+    header nav a, 
+    .nav-item, 
+    .navbar-nav li a { 
+        padding-left: 8px !important;
+        padding-right: 8px !important;
+        margin-left: 5px !important;
+        margin-right: 5px !important;
+        font-size: 14px !important; /* 稍微缩小字号 */
+    }
+
+    /* 🛠️ 修复 2：首屏律师人像与文字重叠 */
+    /* 作用：当横向空间不够时，将“左人右字”强制改为“上人下字”或加大文字左边距 */
+    /* 注意：下面的类名 .lawyer-intro-section 需要根据你网页实际的容器类名微调 */
+    .banner-content,
+    .lawyer-intro-section {
+        display: flex !important;
+        flex-direction: column !important; /* 强制转换为上下堆叠 */
+        align-items: center !important;
+        text-align: center !important;
+        padding-top: 40px !important;
+    }
+    
+    /* 让错位的文字容器宽度撑满，并自动向下推，不再叠在人像脸上 */
+    .lawyer-text-box,
+    .banner-text {
+        width: 100% !important;
+        margin-left: 0 !important;
+        padding: 20px !important;
+    }
+
+    /* 🛠️ 修复 3：底部“联系方式”与“在线预约”表单撞车 */
+    /* 作用：强制让左边的联系信息和右边的输入框分为上下两层显示，各自占满宽度 */
+    /* 注意：下面的类名需要匹配你网页底部的两栏容器 */
+    .contact-section-wrapper,
+    .contact-container {
+        display: flex !important;
+        flex-direction: column !important; /* 核心：由左右并排变为上下两层 */
+    }
+
+    /* 左侧联系方式盒子：宽度拉满 */
+    .contact-info-left,
+    .contact-left {
+        width: 100% !important;
+        margin-bottom: 40px !important; /* 与下方的表单留出体面的空隙 */
+    }
+
+    /* 右侧在线预约表单盒子：宽度拉满，规整排列 */
+    .booking-form-right,
+    .contact-right,
+    .form-container {
+        width: 100% !important;
+        margin-left: 0 !important; /* 清除导致向左平移重叠的负边距或绝对定位 */
+        position: relative !important;
+        left: 0 !important;
+    }
+    
+    /* 🔒 微调：防止右下角绿色客服按钮挡住表单输入框 */
+    .customer-service-buttons,
+    .kefu-pure {
+        right: 10px !important; /* 让悬浮窗极度贴近屏幕最右侧，腾出输入空间 */
+        transform: scale(0.9);  /* 在小屏上整体等比例缩小 10% */
+    }
+}
+</style>
 </head>
 <body>
 <header id="header">
