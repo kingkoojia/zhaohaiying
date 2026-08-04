@@ -766,20 +766,24 @@ var _hmt = _hmt || [];
         <h3>Online Inquiry</h3>
         <p style="margin-bottom:1.5rem;">Briefly describe your situation and we'll respond within 24 hours.</p>
         <form class="contact-form" id="contactForm">
-          <input type="text" placeholder="Your Name" required>
-          <input type="tel" placeholder="Phone Number (including country code)" required>
-          <input type="email" placeholder="Email (optional)">
-          <select>
-            <option value="">Select Service Type</option>
-            <option>Cross-Border Inheritance</option>
-            <option>Asset Liquidation & Fund Transfer</option>
-            <option>Cross-Border Family Law</option>
-            <option>International Estate Planning</option>
-            <option>Other Cross-Border Civil Matter</option>
-          </select>
-          <textarea placeholder="Briefly describe your situation (optional) e.g.: I am in Canada and need to inherit property in Shanghai..."></textarea>
-          <button type="submit" class="btn btn-navy">Submit Inquiry</button>
-        </form>
+  <input type="hidden" name="access_key" value="cf6eede3-5ba7-4cbc-81ad-c5067db4349c">
+  <input type="hidden" name="subject" value="New Inquiry from Website (English)">
+  <input type="hidden" name="from_name" value="Zhao Haiying Law Website">
+  <input type="checkbox" name="botcheck" style="display:none">
+  <input type="text" name="name" placeholder="Your Name" required>
+  <input type="tel" name="phone" placeholder="Phone Number (including country code)" required>
+  <input type="email" name="email" placeholder="Email (optional)">
+  <select name="service">
+    <option value="">Select Service Type</option>
+    <option>Cross-Border Inheritance</option>
+    <option>Asset Liquidation & Fund Transfer</option>
+    <option>Cross-Border Family Law</option>
+    <option>International Estate Planning</option>
+    <option>Other Cross-Border Civil Matter</option>
+  </select>
+  <textarea name="message" placeholder="Briefly describe your situation (optional) e.g.: I am in Canada and need to inherit property in Shanghai..."></textarea>
+  <button type="submit" class="btn btn-navy">Submit Inquiry</button>
+</form>
         <div class="form-success" id="formSuccess">
           <span class="check">&#10004;&#65039;</span>
           <h4>Inquiry Submitted</h4>
@@ -912,8 +916,27 @@ document.addEventListener('DOMContentLoaded', function() {
   if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
       e.preventDefault();
-      contactForm.style.display = 'none';
-      formSuccess.classList.add('show');
+      var btn = contactForm.querySelector('button[type=submit]');
+      btn.disabled = true;
+      btn.textContent = 'Submitting...';
+      var formData = new FormData(contactForm);
+      fetch('https://api.web3forms.com/submit', { method: 'POST', body: formData })
+        .then(function(r) { return r.json(); })
+        .then(function(data) {
+          if (data.success) {
+            contactForm.style.display = 'none';
+            formSuccess.classList.add('show');
+          } else {
+            btn.disabled = false;
+            btn.textContent = 'Submit Inquiry';
+            alert('Submission failed. Please email us at zhaohaiying@lantai.cn');
+          }
+        })
+        .catch(function() {
+          btn.disabled = false;
+          btn.textContent = 'Submit Inquiry';
+          alert('Network error. Please email us at zhaohaiying@lantai.cn');
+        });
     });
   }
   var sections = document.querySelectorAll('section[id]');
