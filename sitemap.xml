@@ -55,8 +55,20 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://zhaohaiyinglvshi.com/article-premarital-agreement-guide.html</loc>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://zhaohaiyinglvshi.com/article-will-guide.html</loc>
     <lastmod>2026-08-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://zhaohaiyinglvshi.com/case-france-inheritance.html</loc>
+    <lastmod>2026-08-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -109,6 +121,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://zhaohaiyinglvshi.com/en-article-premarital-agreement-guide.html</loc>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://zhaohaiyinglvshi.com/en-article-will-guide.html</loc>
     <lastmod>2026-08-03</lastmod>
     <changefreq>monthly</changefreq>
@@ -149,5 +167,17 @@
     <lastmod>2026-08-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://zhaohaiyinglvshi.com/article-rural-homestead-inheritance.html</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://zhaohaiyinglvshi.com/en-article-rural-homestead-inheritance.html</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>
