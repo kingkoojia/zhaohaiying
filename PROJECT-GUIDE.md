@@ -55,12 +55,78 @@ git add -A && git commit -m "说明" && git push origin v3
 
 中文站正文仍用中文标题，仅 URL 使用英文 slug，保持跨语言一致与编码友好。
 
+### 长期规划：服务目录体系（暂不执行）
+
+下一阶段逐步建立 `/services/` 顶层目录，每个业务方向一个子目录：
+
+```
+/services/inheritance/
+/services/cross-border-divorce/
+/services/china-asset-liquidation/
+/services/apostille/
+/services/foreign-criminal-defense/
+```
+
+继承方向进一步细分：
+
+```
+/services/inheritance/overseas-chinese-inheritance/
+/services/inheritance/foreigner-inheritance-china/
+/services/inheritance/china-property-inheritance/
+```
+
+**执行红线：**
+
+- 不批量修改已收录的旧 URL，不做大范围 301 迁移；
+- 新页面逐步按上述目录结构落地；
+- 每新增一个服务目录前，先在本文档确认目录归属与 slug 命名，不随意新建同名目录；
+- 目录体系与现有 `article-*.html` / `case-*.html` 页面并存，未来新内容优先使用目录式 URL。
+
 ### 新增页面时
 
 - 先在本文档确认目录归属与 slug 命名；
 - 一个主题一个目录，不随意新建同名目录；
 - 中英文页面使用同一 slug 前缀（如 `/inheritance/...` 与 `/en/inheritance/...`），互为 hreflang；
 - 不重复已存在的主题页面。
+
+---
+
+## 文章结构化数据规范（2026-08-14 起）
+
+新建文章/案例时，Article Schema 必须包含以下字段：
+
+```json
+{
+  "@type": "Article",
+  "@id": "https://zhaohaiyinglvshi.com/<页面文件名>#article",
+  "headline": "文章标题",
+  "description": "文章摘要",
+  "url": "https://zhaohaiyinglvshi.com/<页面文件名>",
+  "image": "https://zhaohaiyinglvshi.com/images/<文章配图>.jpg",
+  "datePublished": "2026-08-14T00:00:00+08:00",
+  "dateModified": "2026-08-14T00:00:00+08:00",
+  "author": { "@id": "https://zhaohaiyinglvshi.com/#person" },
+  "publisher": { "@id": "https://zhaohaiyinglvshi.com/#organization" },
+  "about": { "@id": "https://zhaohaiyinglvshi.com/#legal-service" }
+}
+```
+
+规则：
+
+1. `image` 必须使用代表该文章内容的配图，不使用通用律师头像或 Logo；
+2. `datePublished` / `dateModified` 使用 ISO 8601 格式并带 `+08:00` 时区，日期不确定时不编造；
+3. 中英文页面必须共用同一套 `@id`（`#person` / `#organization` / `#legal-service`）；
+4. 页面 `<head>` 中同步配置 `og:image`，指向该文章配图或全站默认 `images/og-cover.jpg`；
+5. `canonical` / `hreflang` / OG 标签必须闭合完整，禁止出现 `">>`、缺 `>` 等笔误。
+
+---
+
+## FAQ Schema 定位（2026-08-14 确认）
+
+- FAQPage Schema 继续保留，全站正常使用；
+- 定位是**内容语义 / GEO / 问答理解**，不是 Google 搜索富结果；
+- Google 已将 FAQ 富结果展示限制在知名、权威的政府和健康网站，普通商业网站即使正确使用 FAQPage 通常也不会获得该富结果；
+- 因此编写 FAQ 时，目标是让 AI 与搜索引擎正确理解"用户问题 → 明确答案"，不追求页面上的折叠展示。
 
 ---
 
