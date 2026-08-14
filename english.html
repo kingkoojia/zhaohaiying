@@ -35,15 +35,71 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "LegalService",
-  "name": "Zhao Haiying",
-  "alternateName": "Zhao Haiying · Attorney at Law",
-  "description": "Cross-border civil legal services for overseas Chinese and foreign nationals with assets in China.",
-  "url": "https://zhaohaiyinglvshi.com/english.html",
+  "@type": "Person",
+  "@id": "https://zhaohaiyinglvshi.com/#person",
+  "name": "赵海英",
+  "alternateName": "Zhao Haiying",
+  "jobTitle": "律师",
+  "url": "https://zhaohaiyinglvshi.com/zhao-haiying/",
+  "image": "https://zhaohaiyinglvshi.com/images/lawyerPic.jpg",
+  "description": "赵海英律师，执业于兰台（上海）律师事务所，主要从事涉外继承、跨境婚姻家事及在华资产处置等涉外法律服务。",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "兰台（上海）律师事务所",
+    "url": "https://www.lantai.cn"
+  },
+  "sameAs": [
+    "https://credit.lawyers.org.cn/lawyer.jsp?id=1dd45a7e0b294d93a45e6f00fdd19d6f"
+  ],
+  "knowsAbout": ["涉外继承", "跨境婚姻家事", "在华资产处置"]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://zhaohaiyinglvshi.com/#organization",
+  "name": "兰台（上海）律师事务所",
+  "alternateName": "Lantai (Shanghai) Law Firm",
+  "url": "https://www.lantai.cn",
+  "logo": "https://zhaohaiyinglvshi.com/images/lantailogo.png",
   "telephone": "+86-17321099752",
   "email": "zhaohaiying@lantai.cn",
-  "address": { "@type": "PostalAddress", "streetAddress": "No. 88 Zhongshan Rd E, The Bund SOHO C 1001-1002", "addressLocality": "Shanghai", "addressRegion": "Huangpu", "addressCountry": "CN" },
-  "parentOrganization": { "@type": "LegalService", "name": "Lantai Shanghai" },
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "No. 88 Zhongshan Rd E, The Bund SOHO C 1001-1002",
+    "addressLocality": "Shanghai",
+    "addressRegion": "Huangpu",
+    "addressCountry": "CN"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://zhaohaiyinglvshi.com/#website",
+  "name": "Zhao Haiying Attorney at Law",
+  "alternateName": "赵海英律师官网",
+  "url": "https://zhaohaiyinglvshi.com/english.html",
+  "inLanguage": "en",
+  "publisher": {
+    "@id": "https://zhaohaiyinglvshi.com/#organization"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LegalService",
+  "@id": "https://zhaohaiyinglvshi.com/#legal-service",
+  "name": "涉外法律服务",
+  "alternateName": "Cross-Border Legal Services",
+  "description": "Cross-border civil legal services for overseas Chinese and foreign nationals with assets in China.",
+  "url": "https://zhaohaiyinglvshi.com/english.html",
+  "provider": {
+    "@id": "https://zhaohaiyinglvshi.com/#organization"
+  },
   "priceRange": "Negotiable",
   "image": "https://zhaohaiyinglvshi.com/images/lawyerPic.jpg",
   "areaServed": ["China","United States","Canada","Australia","Japan","Germany","United Kingdom","France","Singapore","Hong Kong","Taiwan"],
@@ -542,14 +598,7 @@ var _hmt = _hmt || [];
         <div class="hero-stat"><div class="num" data-count="300">0</div><p class="label">Cross-Border Cases</p></div>
         <div class="hero-stat"><div class="num" data-count="98">0</div><p class="label">Satisfaction %</p></div>
       </div>
-      <div class="article-card fade-in">
-        <div class="article-card-body">
-          <span class="tag">Asset Repatriation</span>
-           <h3><a href="en-article-fund-repatriation-property.html">How to Remit China Property Sale Proceeds</a></h3>
-           <p>Complete guide to tax clearance, bank application, currency exchange, and cross-border remittance for China property sales.</p>
-        </div>
-      </div>
-    </div>    </div>
+    </div>
   </div>
 </section>
 
@@ -733,6 +782,13 @@ var _hmt = _hmt || [];
           <span class="tag">Fund Transfer</span>
           <h3><a href="en-fund-transfer.html">Asset Liquidation & Fund Repatriation for Foreign Nationals</a></h3>
           <p>Understanding the tax clearance, forex purchase, and cross-border remittance process for foreign nationals selling Chinese assets.</p>
+        </div>
+      </div>
+      <div class="article-card fade-in">
+        <div class="article-card-body">
+          <span class="tag">Asset Repatriation</span>
+          <h3><a href="en-article-fund-repatriation-property.html">How to Remit China Property Sale Proceeds</a></h3>
+          <p>Complete guide to tax clearance, bank application, currency exchange, and cross-border remittance for China property sales.</p>
         </div>
       </div>
       <div class="article-card fade-in">
@@ -1070,5 +1126,3 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 </body>
 </html>
-
-
