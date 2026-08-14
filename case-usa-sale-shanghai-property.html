@@ -95,17 +95,56 @@ body{padding-bottom:60px}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "在美华人出售上海房产案：跨境身份认证与资金出境全流程",
-  "description": "外籍业主出售中国房产，旧护照与新护照如何证明同一人、人在国外如何签约过户、售房款如何合法汇出？以赵海英律师远程代理的真实案例（已脱敏）讲清跨境卖房全流程。",
-  "author": {
-    "@type": "Person",
-    "name": "赵海英律师"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "兰台（上海）律师事务所"
-  }
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://zhaohaiyinglvshi.com/#person",
+      "name": "赵海英",
+      "alternateName": "Zhao Haiying",
+      "jobTitle": "律师",
+      "url": "https://zhaohaiyinglvshi.com/",
+      "image": "https://zhaohaiyinglvshi.com/images/lawyerPic.jpg",
+      "description": "赵海英律师，执业于兰台（上海）律师事务所，主要从事涉外继承、跨境婚姻家事及在华资产处置等涉外法律服务。",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "兰台（上海）律师事务所",
+        "url": "https://www.lantai.cn"
+      },
+      "sameAs": [
+        "https://credit.lawyers.org.cn/lawyer.jsp?id=1dd45a7e0b294d93a45e6f00fdd19d6f"
+      ],
+      "knowsAbout": [
+        "涉外继承",
+        "跨境婚姻家事",
+        "在华资产处置"
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://zhaohaiyinglvshi.com/#organization",
+      "name": "兰台（上海）律师事务所",
+      "url": "https://www.lantai.cn"
+    },
+    {
+      "@type": "LegalService",
+      "@id": "https://zhaohaiyinglvshi.com/#legal-service",
+      "name": "涉外法律服务"
+    },
+    {
+      "@type": "Article",
+      "headline": "在美华人出售上海房产案：跨境身份认证与资金出境全流程",
+      "description": "外籍业主出售中国房产，旧护照与新护照如何证明同一人、人在国外如何签约过户、售房款如何合法汇出？以赵海英律师远程代理的真实案例（已脱敏）讲清跨境卖房全流程。",
+      "author": {
+        "@id": "https://zhaohaiyinglvshi.com/#person"
+      },
+      "publisher": {
+        "@id": "https://zhaohaiyinglvshi.com/#organization"
+      },
+      "about": {
+        "@id": "https://zhaohaiyinglvshi.com/#legal-service"
+      }
+    }
+  ]
 }
 </script>
 <script type="application/ld+json">

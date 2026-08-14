@@ -95,17 +95,56 @@ body{padding-bottom:60px}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "外祖父在中国去世，德国籍外孙女如何代位继承？",
-  "description": "子女先于父母去世，孙辈可以代位继承，外籍身份不影响继承权。以赵海英律师代理的真实案例（已脱敏）讲清代位继承、境外文件认证与外汇转移实务。",
-  "author": {
-    "@type": "Person",
-    "name": "赵海英律师"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "兰台（上海）律师事务所"
-  }
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://zhaohaiyinglvshi.com/#person",
+      "name": "赵海英",
+      "alternateName": "Zhao Haiying",
+      "jobTitle": "律师",
+      "url": "https://zhaohaiyinglvshi.com/",
+      "image": "https://zhaohaiyinglvshi.com/images/lawyerPic.jpg",
+      "description": "赵海英律师，执业于兰台（上海）律师事务所，主要从事涉外继承、跨境婚姻家事及在华资产处置等涉外法律服务。",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "兰台（上海）律师事务所",
+        "url": "https://www.lantai.cn"
+      },
+      "sameAs": [
+        "https://credit.lawyers.org.cn/lawyer.jsp?id=1dd45a7e0b294d93a45e6f00fdd19d6f"
+      ],
+      "knowsAbout": [
+        "涉外继承",
+        "跨境婚姻家事",
+        "在华资产处置"
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://zhaohaiyinglvshi.com/#organization",
+      "name": "兰台（上海）律师事务所",
+      "url": "https://www.lantai.cn"
+    },
+    {
+      "@type": "LegalService",
+      "@id": "https://zhaohaiyinglvshi.com/#legal-service",
+      "name": "涉外法律服务"
+    },
+    {
+      "@type": "Article",
+      "headline": "外祖父在中国去世，德国籍外孙女如何代位继承？",
+      "description": "子女先于父母去世，孙辈可以代位继承，外籍身份不影响继承权。以赵海英律师代理的真实案例（已脱敏）讲清代位继承、境外文件认证与外汇转移实务。",
+      "author": {
+        "@id": "https://zhaohaiyinglvshi.com/#person"
+      },
+      "publisher": {
+        "@id": "https://zhaohaiyinglvshi.com/#organization"
+      },
+      "about": {
+        "@id": "https://zhaohaiyinglvshi.com/#legal-service"
+      }
+    }
+  ]
 }
 </script>
 <script type="application/ld+json">

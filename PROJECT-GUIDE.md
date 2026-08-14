@@ -37,6 +37,33 @@ git add -A && git commit -m "说明" && git push origin v3
 
 ---
 
+## URL 规范（2026-08-14 起）
+
+### 原则
+
+1. **旧 URL 不动。** 已被搜索引擎收录的 `/article-*.html`、`/case-*.html` 等页面保持原样，不批量改路径、不做 301 迁移，避免收录波动。
+2. **新页面逐步规范。** 新内容优先采用清晰、稳定的目录式结构，长期统一使用英文 slug，不中英混用。
+3. **优先级从高到低：** 内容质量 > URL 规范 > 目录层级。URL 只是加分项，不因追求规范牺牲内容与收录稳定。
+
+### 推荐格式
+
+```
+/inheritance/
+/inheritance/overseas-chinese-real-estate-tax/
+/inheritance/foreigner-inheritance-china/
+```
+
+中文站正文仍用中文标题，仅 URL 使用英文 slug，保持跨语言一致与编码友好。
+
+### 新增页面时
+
+- 先在本文档确认目录归属与 slug 命名；
+- 一个主题一个目录，不随意新建同名目录；
+- 中英文页面使用同一 slug 前缀（如 `/inheritance/...` 与 `/en/inheritance/...`），互为 hreflang；
+- 不重复已存在的主题页面。
+
+---
+
 ## 跳转
 
 | 文件 | 说明 |

@@ -5,23 +5,57 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "LegalService",
-  "name": "赵海英涉外律师团队 (Zhao Haiying Law Office)",
-  "alternateName": "Zhao Haiying · Attorney at Law",
-  "description": "赵海英律师团队深度聚焦涉外法律服务，专办海外华侨华人中国境内遗产继承、跨国离婚、涉外资产变现及海牙认证。提供免回国一条龙代办服务。",
+  "@type": "Person",
+  "@id": "https://zhaohaiyinglvshi.com/#person",
+  "name": "赵海英",
+  "alternateName": "Zhao Haiying",
+  "jobTitle": "律师",
+  "description": "赵海英律师，执业于兰台（上海）律师事务所，主要从事涉外继承、跨境婚姻家事及在华资产处置等涉外法律服务。",
+  "url": "https://zhaohaiyinglvshi.com/",
   "image": "https://zhaohaiyinglvshi.com/images/lawyerPic.jpg",
-  "telephone": "+86-17321099752 13774450050",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "兰台（上海）律师事务所",
+    "url": "https://www.lantai.cn"
+  },
+  "sameAs": [
+    "https://credit.lawyers.org.cn/lawyer.jsp?id=1dd45a7e0b294d93a45e6f00fdd19d6f"
+  ],
+  "knowsAbout": [
+    "涉外继承",
+    "跨境婚姻家事",
+    "在华资产处置"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://zhaohaiyinglvshi.com/#organization",
+  "name": "兰台（上海）律师事务所",
+  "url": "https://www.lantai.cn",
+  "telephone": "+86-17321099752",
   "email": "zhaohaiying@lantai.cn",
-  "url": "https://zhaohaiyinglvshi.com",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "黄浦区中山东二路88号外滩SOHO C座10层",
-    "addressLocality": "Shanghai",
+    "addressLocality": "上海市",
+    "addressRegion": "上海市",
     "addressCountry": "CN"
-  },
-  "parentOrganization": {
-    "@type": "LegalService",
-    "name": "兰台（上海）律师事务所"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LegalService",
+  "@id": "https://zhaohaiyinglvshi.com/#legal-service",
+  "name": "涉外法律服务",
+  "description": "提供涉外继承、跨境婚姻家事、在华资产处置、涉外刑事辩护等法律服务。",
+  "url": "https://zhaohaiyinglvshi.com",
+  "provider": {
+    "@id": "https://zhaohaiyinglvshi.com/#organization"
   },
   "priceRange": "$$$",
   "areaServed": [
@@ -36,6 +70,12 @@
     "新加坡",
     "中国香港",
     "中国台湾"
+  ],
+  "serviceType": [
+    "外资企业法律服务",
+    "在华资产处置法律服务",
+    "跨境婚姻家事法律服务",
+    "涉外刑事辩护法律服务"
   ],
   "knowsAbout": [
     "Cross-border Inheritance",

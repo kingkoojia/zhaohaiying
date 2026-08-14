@@ -119,17 +119,56 @@ body{padding-bottom:60px}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "Foreign Nationals in China: Complete Guide to Criminal Defense",
-  "description": "What rights do foreign nationals have when detained in China? Complete criminal defense guide.",
-  "author": {
-    "@type": "Person",
-    "name": "Zhao Haiying"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Lantai (Shanghai) Law Firm"
-  }
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://zhaohaiyinglvshi.com/#person",
+      "name": "赵海英",
+      "alternateName": "Zhao Haiying",
+      "jobTitle": "律师",
+      "url": "https://zhaohaiyinglvshi.com/",
+      "image": "https://zhaohaiyinglvshi.com/images/lawyerPic.jpg",
+      "description": "赵海英律师，执业于兰台（上海）律师事务所，主要从事涉外继承、跨境婚姻家事及在华资产处置等涉外法律服务。",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "兰台（上海）律师事务所",
+        "url": "https://www.lantai.cn"
+      },
+      "sameAs": [
+        "https://credit.lawyers.org.cn/lawyer.jsp?id=1dd45a7e0b294d93a45e6f00fdd19d6f"
+      ],
+      "knowsAbout": [
+        "涉外继承",
+        "跨境婚姻家事",
+        "在华资产处置"
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://zhaohaiyinglvshi.com/#organization",
+      "name": "兰台（上海）律师事务所",
+      "url": "https://www.lantai.cn"
+    },
+    {
+      "@type": "LegalService",
+      "@id": "https://zhaohaiyinglvshi.com/#legal-service",
+      "name": "涉外法律服务"
+    },
+    {
+      "@type": "Article",
+      "headline": "Foreign Nationals in China: Complete Guide to Criminal Defense",
+      "description": "What rights do foreign nationals have when detained in China? Complete criminal defense guide.",
+      "author": {
+        "@id": "https://zhaohaiyinglvshi.com/#person"
+      },
+      "publisher": {
+        "@id": "https://zhaohaiyinglvshi.com/#organization"
+      },
+      "about": {
+        "@id": "https://zhaohaiyinglvshi.com/#legal-service"
+      }
+    }
+  ]
 }
 </script>
 </head>
