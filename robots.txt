@@ -2,3 +2,16 @@
 Allow: /
 Disallow: /seo-report-
 Sitemap: https://zhaohaiyinglvshi.com/sitemap.xml
+
+# AI crawlers
+User-agent: GPTBot
+Allow: /
+Disallow: /seo-report-
+
+User-agent: ClaudeBot
+Allow: /
+Disallow: /seo-report-
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /seo-report-

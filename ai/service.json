@@ -1,0 +1,35 @@
+{
+  "organization": "兰台（上海）律师事务所",
+  "lawyer": "赵海英律师",
+  "services": [
+    {
+      "name": "涉外继承",
+      "en": "Cross-Border Inheritance",
+      "description": "Foreign nationals and overseas Chinese inheriting or administering property in China."
+    },
+    {
+      "name": "资金资产出境",
+      "en": "Asset Repatriation",
+      "description": "Lawful sale, liquidation, and remittance of China assets from abroad."
+    },
+    {
+      "name": "跨境婚姻家事",
+      "en": "Cross-Border Family Law",
+      "description": "Overseas divorce, custody, prenuptial agreements, and cross-border property disputes."
+    },
+    {
+      "name": "涉外遗嘱与财富传承",
+      "en": "Wills and Estate Planning",
+      "description": "China-related wills, dual-jurisdiction estate planning, and succession structures."
+    },
+    {
+      "name": "海牙认证与涉外文书",
+      "en": "Apostille and Cross-Border Documents",
+      "description": "Authentication, notarization, apostille, and recognition of foreign documents and judgments."
+    }
+  ],
+  "contact": {
+    "phone": "173 2109 9752",
+    "website": "https://zhaohaiyinglvshi.com"
+  }
+}

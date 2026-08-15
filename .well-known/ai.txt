@@ -1,0 +1,7 @@
+# Zhao Haiying Law | AI crawler permissions
+User-agent: *
+Allow: /
+Allow: /llms.txt
+Allow: /ai/
+Disallow: /seo-report-
+Sitemap: https://zhaohaiyinglvshi.com/sitemap.xml
