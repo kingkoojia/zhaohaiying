@@ -1211,6 +1211,13 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 </script>
+
+<script>
+  // Redirect the legacy /index.html entry to the canonical root URL.
+  if (window.location.pathname === '/index.html' || window.location.pathname === '/index.html/') {
+    window.location.replace('/');
+  }
+</script>
 </body>
 </html>
 
