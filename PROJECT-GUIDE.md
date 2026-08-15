@@ -137,3 +137,12 @@ git add -A && git commit -m "说明" && git push origin v3
 | `../统一规则.md` | **全面规则文件（必读）** — 含设计系统、代码规范、命名规则、DNS 等 |
 | `zh-article-template.html` | 中文文章模板 |
 | `en-article-template.html` | 英文文章模板 |
+
+## 新文章上线必做清单（2026-08-15 起）
+
+1. 正文至少引用 1-3 个权威外部来源，不能只写内部链接。
+2. 同步补全 canonical、hreflang、OG、Article Schema。
+3. 发布后更新 sitemap.xml 与 llms.txt；启用 RSS/Atom 后同步加入 /feed.xml。
+4. 避免 thin content：正文应有完整段落、定义性结论、流程和 FAQ。
+5. 关键词自然进入 H1/H2、首段、FAQ。
+6. 涉及法条、税率、外汇、海牙认证等，必须写明具体依据和核验日期。
