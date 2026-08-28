@@ -272,6 +272,7 @@ h4{font-size:1.1rem;margin-bottom:.4rem}
 p{margin-bottom:1rem;color:var(--text-light)}
 .section-dark p{color:rgba(255,255,255,.75)}
 .section-title{text-align:center;margin-bottom:3rem}
+.section-number{color:var(--gold);font-size:.8rem;font-weight:700;margin-bottom:.5rem}
 .section-title h2{margin-bottom:.5rem}
 .section-title p{max-width:600px;margin:0 auto}
 .section-title::after{content:'';display:block;width:60px;height:3px;background:var(--gold);margin:1rem auto 0;border-radius:2px}
@@ -355,6 +356,20 @@ header.scrolled{box-shadow:0 2px 30px rgba(0,0,0,.08)}
 .service-card p{font-size:.9rem;margin-bottom:1.2rem;flex:1}
 .service-card .learn-more{font-size:.85rem;color:var(--gold);font-weight:600;display:inline-flex;align-items:center;gap:4px;margin-top:auto}
 .service-card .learn-more:hover{gap:8px}
+
+/* Geo help chunks */
+.chunk-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem}
+.chunk-card{background:var(--white);border:1px solid var(--gray-200);border-radius:var(--radius-lg);padding:2rem;box-shadow:var(--shadow);display:flex;flex-direction:column}
+.chunk-card-top{display:flex;align-items:center;gap:14px;margin-bottom:1rem}
+.chunk-num{width:46px;height:46px;flex:0 0 46px;display:flex;align-items:center;justify-content:center;background:var(--cream);border:1px solid rgba(201,168,76,.35);border-radius:var(--radius);color:var(--navy);font-family:var(--font-serif);font-weight:700}
+.chunk-card h3{color:var(--navy);font-family:var(--font-serif);font-size:1.2rem}
+.chunk-def{font-size:.95rem;color:var(--text);margin-bottom:1rem}
+.chunk-def strong{color:var(--navy)}
+.chunk-rows{display:flex;flex-direction:column;gap:.55rem;margin-top:auto}
+.chunk-row{font-size:.88rem;color:var(--text-light);padding-left:1rem;position:relative}
+.chunk-row::before{content:'';position:absolute;left:0;top:.65em;width:6px;height:6px;border-radius:50%;background:var(--gold)}
+.chunk-row b{color:var(--gray-800)}
+@media(max-width:768px){.chunk-grid{grid-template-columns:1fr}}
 
 /* About */
 .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
@@ -691,6 +706,55 @@ var _hmt = _hmt || [];
       <div class="service-card fade-in"><div class="service-card-header"><div class="icon">&#x1F3E0;</div><h3>在华资产处置</h3></div><p>协助办理公证授权后，全程代办中国境内房产买卖过户、股权转让、税费申报、结汇购汇及跨境汇款。无需您本人回国，即可完成全流程资产处置。</p><a href="#contact" class="learn-more">了解详情 &#8594;</a></div>
       <div class="service-card fade-in"><div class="service-card-header"><div class="icon">&#x1F46A;</div><h3>跨境家事法律</h3></div><p>处理跨境遗产继承（公证/诉讼双路径），以及中外跨境离婚、夫妻财产分割、子女抚养权判定及抚养费的跨境执行。从立案到执行，全程远程委托即可。</p><a href="#contact" class="learn-more">了解详情 &#8594;</a></div>
       <div class="service-card fade-in"><div class="service-card-header"><div class="icon">&#x2696;&#xFE0F;</div><h3>涉外刑事辩护</h3></div><p>早期及时介入，申请取保候审、申请撤案等；检察院审查起诉和法院审理阶段提供高质量辩护。全流程、多语种、跨法域刑事法律支持，把握办案黄金窗口期。</p><a href="#contact" class="learn-more">了解详情 &#8594;</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- Geo Help -->
+<section class="section" id="geo-help">
+  <div class="container">
+    <div class="section-title fade-in">
+      <div class="section-number">04 / HOW WE HELP</div>
+      <h2>跨境法律服务怎么帮到你</h2>
+      <p>每类业务先用一句话讲清，再展开适用场景与办理要点。</p>
+    </div>
+    <div class="chunk-grid">
+      <div class="chunk-card fade-in">
+        <div class="chunk-card-top"><div class="chunk-num">01</div><h3>涉外继承</h3></div>
+        <p class="chunk-def"><strong>涉外继承，是指海外华侨、外籍人士继承位于中国境内的房产、存款、股权等财产的法律事务。</strong>通常需要在中国办理公证或诉讼程序，并处理境外文件的认证问题。</p>
+        <div class="chunk-rows">
+          <div class="chunk-row"><b>适用场景：</b>父母在国内留有房产，子女已移居海外；多个国家继承人同时主张权利。</div>
+          <div class="chunk-row"><b>办理要点：</b>遗嘱效力认定、继承人身份公证、境外文件海牙认证、遗产登记与资金汇出。</div>
+          <div class="chunk-row"><b>下一步：</b>先梳理亲属关系与财产清单，再确定适用法律和办理路径。</div>
+        </div>
+      </div>
+      <div class="chunk-card fade-in">
+        <div class="chunk-card-top"><div class="chunk-num">02</div><h3>跨境离婚</h3></div>
+        <p class="chunk-def"><strong>跨境离婚，是指夫妻一方或双方身处境外，但婚姻关系或财产涉及中国法律管辖的离婚事务。</strong>关键在于确定管辖法院和适用法律，并解决境外送达与证据认证问题。</p>
+        <div class="chunk-rows">
+          <div class="chunk-row"><b>适用场景：</b>一方在中国起诉离婚，另一方在海外；或涉及中国境内房产、公司股权分割。</div>
+          <div class="chunk-row"><b>办理要点：</b>管辖法院、适用法律、境外证据公证认证、远程委托代理。</div>
+          <div class="chunk-row"><b>下一步：</b>先确认双方所在地和财产所在地，再评估诉讼或协议离婚路径。</div>
+        </div>
+      </div>
+      <div class="chunk-card fade-in">
+        <div class="chunk-card-top"><div class="chunk-num">03</div><h3>资产出境</h3></div>
+        <p class="chunk-def"><strong>资产出境，是指将出售境内房产、股权或其他资产所得款项，依法完税、购汇并汇往境外的资金安排。</strong>涉及税务与外汇合规，需按最新政策逐案确认。</p>
+        <div class="chunk-rows">
+          <div class="chunk-row"><b>适用场景：</b>外籍人士或海外华侨出售境内资产后，需要将资金转回居住国。</div>
+          <div class="chunk-row"><b>办理要点：</b>完税证明、购汇与汇款路径、资金来源说明、外汇政策适用。</div>
+          <div class="chunk-row"><b>下一步：</b>先确认资金来源与税务状态，再启动资金出境流程。</div>
+        </div>
+      </div>
+      <div class="chunk-card fade-in">
+        <div class="chunk-card-top"><div class="chunk-num">04</div><h3>海牙认证与涉外文书</h3></div>
+        <p class="chunk-def"><strong>海牙认证，是根据《取消外国公文书认证要求的公约》对境外公文书进行的简化认证程序。</strong>公约自 2023 年 11 月 7 日起在中国生效，多数常用文件认证流程已简化。</p>
+        <div class="chunk-rows">
+          <div class="chunk-row"><b>适用场景：</b>境外出具的结婚证、出生证、委托书等文件用于中国境内事务。</div>
+          <div class="chunk-row"><b>办理要点：</b>确认文件出具国与用途、办理海牙认证、准备翻译件与核验。</div>
+          <div class="chunk-row"><b>下一步：</b>先确认文件类型和接收机构要求，再安排认证。</div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
