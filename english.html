@@ -325,6 +325,21 @@ header.scrolled{box-shadow:0 2px 30px rgba(0,0,0,.08)}
 .service-card p{font-size:.9rem;margin-bottom:1.2rem;flex:1}
 .service-card .learn-more{font-size:.85rem;color:var(--gold);font-weight:600;display:inline-flex;align-items:center;gap:4px;margin-top:auto}
 .service-card .learn-more:hover{gap:8px}
+
+/* Geo help chunks */
+.chunk-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem}
+.chunk-card{background:var(--white);border:1px solid var(--gray-200);border-radius:var(--radius-lg);padding:2rem;box-shadow:var(--shadow);display:flex;flex-direction:column}
+.chunk-card-top{display:flex;align-items:center;gap:14px;margin-bottom:1rem}
+.chunk-num{width:46px;height:46px;flex:0 0 46px;display:flex;align-items:center;justify-content:center;background:var(--cream);border:1px solid rgba(201,168,76,.35);border-radius:var(--radius);color:var(--navy);font-family:var(--font-serif);font-weight:700}
+.chunk-card h3{color:var(--navy);font-family:var(--font-serif);font-size:1.2rem}
+.chunk-def{font-size:.95rem;color:var(--text);margin-bottom:1rem}
+.chunk-def strong{color:var(--navy)}
+.chunk-rows{display:flex;flex-direction:column;gap:.55rem;margin-top:auto}
+.chunk-row{font-size:.88rem;color:var(--text-light);padding-left:1rem;position:relative}
+.chunk-row::before{content:'';position:absolute;left:0;top:.65em;width:6px;height:6px;border-radius:50%;background:var(--gold)}
+.chunk-row b{color:var(--gray-800)}
+@media(max-width:768px){.chunk-grid{grid-template-columns:1fr}}
+
 .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
 .about-image{border-radius:var(--radius-lg);aspect-ratio:4/5;overflow:hidden;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-light) 100%);box-shadow:var(--shadow-lg)}
 .about-image img{width:100%;height:100%;object-fit:cover}
@@ -631,6 +646,54 @@ var _hmt = _hmt || [];
       <div class="service-card fade-in"><div class="service-card-header"><div class="icon">&#x1F3E0;</div><h3>Overseas Asset Disposal</h3></div><p>Upon your power of attorney, we handle property sales, equity transfers, tax clearance, foreign exchange purchase, and cross-border remittance — all without requiring your physical presence in China. Streamlined asset disposal for overseas Chinese.</p><a href="#contact" class="learn-more">Learn more &#8594;</a></div>
       <div class="service-card fade-in"><div class="service-card-header"><div class="icon">&#x1F46A;</div><h3>Cross-Border Family Law</h3></div><p>Cross-border inheritance (notarial and litigation pathways), China-U.S. divorce, marital property division, child custody, and cross-border enforcement of support orders. All manageable remotely with your authorization.</p><a href="#contact" class="learn-more">Learn more &#8594;</a></div>
       <div class="service-card fade-in"><div class="service-card-header"><div class="icon">&#x2696;&#xFE0F;</div><h3>Cross-Border Criminal Defense</h3></div><p>Early-stage bail applications, case dismissal advocacy, prosecutorial review submissions, and trial representation. Full-process, multilingual, cross-jurisdictional criminal defense support to navigate China's critical procedural windows.</p><a href="#contact" class="learn-more">Learn more &#8594;</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- Geo Help -->
+<section class="section" id="geo-help">
+  <div class="container">
+    <div class="section-title fade-in">
+      <h2>How Cross-Border Legal Services Help You</h2>
+      <p>A clear answer first, then who it applies to and how to proceed.</p>
+    </div>
+    <div class="chunk-grid">
+      <div class="chunk-card fade-in">
+        <div class="chunk-card-top"><div class="chunk-num">01</div><h3>Cross-Border Inheritance</h3></div>
+        <p class="chunk-def"><strong>Cross-border inheritance covers cases where overseas Chinese or foreign nationals inherit property located in mainland China, such as real estate, bank deposits, or equity.</strong> It usually requires notarial or court proceedings in China plus authentication of overseas documents.</p>
+        <div class="chunk-rows">
+          <div class="chunk-row"><b>Applies when:</b> Parents leave property in China while children live abroad; heirs in multiple countries claim the same estate.</div>
+          <div class="chunk-row"><b>Key steps:</b> Will validity, identity notarization, apostille of overseas documents, inheritance registration, and lawful transfer of funds.</div>
+          <div class="chunk-row"><b>Next step:</b> List family relationships and assets first, then determine the applicable law and the right path.</div>
+        </div>
+      </div>
+      <div class="chunk-card fade-in">
+        <div class="chunk-card-top"><div class="chunk-num">02</div><h3>Cross-Border Divorce</h3></div>
+        <p class="chunk-def"><strong>Cross-border divorce refers to divorce proceedings where one or both spouses live abroad but the marriage or assets fall within the scope of Chinese law.</strong> Jurisdiction and applicable law are the two issues that decide how the case moves forward.</p>
+        <div class="chunk-rows">
+          <div class="chunk-row"><b>Applies when:</b> One spouse files for divorce in China while the other is overseas; division of China real estate or company shares is involved.</div>
+          <div class="chunk-row"><b>Key steps:</b> Jurisdiction, applicable law, notarization and apostille of overseas evidence, and remote representation.</div>
+          <div class="chunk-row"><b>Next step:</b> Confirm where both parties and the assets are located, then choose litigation or a negotiated divorce.</div>
+        </div>
+      </div>
+      <div class="chunk-card fade-in">
+        <div class="chunk-card-top"><div class="chunk-num">03</div><h3>Asset Repatriation</h3></div>
+        <p class="chunk-def"><strong>Asset repatriation means lawfully completing tax clearance, foreign currency purchase, and remittance of proceeds from assets sold in China.</strong> Tax and foreign exchange compliance must be confirmed case by case under the latest policy.</p>
+        <div class="chunk-rows">
+          <div class="chunk-row"><b>Applies when:</b> Foreign nationals or overseas Chinese sell property in China and need to transfer the funds to their country of residence.</div>
+          <div class="chunk-row"><b>Key steps:</b> Tax certificates, currency purchase and remittance routes, source-of-funds documentation, and applicable foreign exchange policy.</div>
+          <div class="chunk-row"><b>Next step:</b> Confirm the source of funds and tax status before starting the process.</div>
+        </div>
+      </div>
+      <div class="chunk-card fade-in">
+        <div class="chunk-card-top"><div class="chunk-num">04</div><h3>Apostille and Cross-Border Documents</h3></div>
+        <p class="chunk-def"><strong>Apostille is the simplified authentication procedure for foreign public documents under the Convention Abolishing the Requirement of Legalisation for Foreign Public Documents.</strong> The convention entered into force for China on November 7, 2023, simplifying authentication for most common documents.</p>
+        <div class="chunk-rows">
+          <div class="chunk-row"><b>Applies when:</b> Marriage certificates, birth certificates, or powers of attorney issued abroad are used for matters in China.</div>
+          <div class="chunk-row"><b>Key steps:</b> Confirm the issuing country and intended use, obtain the apostille, and prepare translations and verification.</div>
+          <div class="chunk-row"><b>Next step:</b> Confirm the document type and the receiving institution's requirements before arranging authentication.</div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
