@@ -140,7 +140,7 @@ git add -A && git commit -m "说明" && git push origin v3
 
 ## 新文章上线必做清单（2026-08-15 起）
 
-1. 正文至少引用 1-3 个权威外部来源，不能只写内部链接。
+1. 正文必须实际包含可点击的外部权威来源外链，至少 1-3 个，不能只写内部链接；发布前逐条验证外链可访问，无外链视为文章未完成。
 2. 同步补全 canonical、hreflang、OG、Article Schema。
 3. 发布后更新 sitemap.xml 与 llms.txt；启用 RSS/Atom 后同步加入 /feed.xml。
 4. 避免 thin content：正文应有完整段落、定义性结论、流程和 FAQ。
