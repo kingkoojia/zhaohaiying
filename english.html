@@ -1205,6 +1205,9 @@ document.addEventListener('DOMContentLoaded', function() {
           if (data.success) {
             contactForm.style.display = 'none';
             formSuccess.classList.add('show');
+            if (typeof window.zhaoTrackFormLead === 'function') {
+              window.zhaoTrackFormLead('contact_form_en');
+            }
           } else {
             btn.disabled = false;
             btn.textContent = 'Submit Inquiry';
@@ -1238,5 +1241,6 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 </script>
+<script src="/js/analytics-events.js" defer></script>
 </body>
 </html>
