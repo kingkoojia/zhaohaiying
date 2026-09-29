@@ -957,15 +957,6 @@ var _hmt = _hmt || [];
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-  // --- 语言自动检测 ---
-  // 如果用户之前手动选择过语言，尊重选择
-  if (!document.cookie.match(/(^| )lang_choice=/)) {
-    var userLang = navigator.language || navigator.userLanguage;
-    // 英文用户(含en-US/en-GB等)自动跳转到英文版
-    if (userLang && userLang.substr(0,2) === 'en' && !window.location.href.match(/english\.html/)) {
-      window.location.href = 'english.html';
-    }
-  }
   var header = document.getElementById('header');
   var hamburger = document.querySelector('.hamburger');
   var navLinks = document.querySelector('.nav-links');
