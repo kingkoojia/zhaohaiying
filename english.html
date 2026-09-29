@@ -1150,14 +1150,6 @@ var _hmt = _hmt || [];
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-  // --- Language auto-detect ---
-  if (!document.cookie.match(/(^| )lang_choice=/)) {
-    var userLang = navigator.language || navigator.userLanguage;
-    // Chinese users get redirected to Chinese version
-    if (userLang && userLang.substr(0,2) === 'zh' && !window.location.href.match(/index\.html/)) {
-      window.location.href = '/';
-    }
-  }
   var header = document.getElementById('header');
   var hamburger = document.querySelector('.hamburger');
   var navLinks = document.querySelector('.nav-links');
