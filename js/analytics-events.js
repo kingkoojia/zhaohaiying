@@ -40,16 +40,31 @@
       sendEvent("wechat_click", params);
     } else if (href.indexOf("#contact") !== -1) {
       sendEvent("consultation_click", params);
+      try {
+        var path = window.location.pathname;
+        var existing = sessionStorage.getItem("zh_lead_source");
+        if (path !== "/" && path !== "/index.html" && path !== "/english.html" && !existing) {
+          sessionStorage.setItem("zh_lead_source", path);
+        }
+      } catch (e) {}
     }
   }, true);
 
   window.zhaoTrackFormLead = function (formName) {
+    var leadSourcePage = window.location.pathname;
+    try {
+      var stored = sessionStorage.getItem("zh_lead_source");
+      if (stored) {
+        leadSourcePage = stored;
+      }
+    } catch (e) {}
     sendEvent(
       "generate_lead",
       Object.assign(
         {
           form_name: formName,
-          method: "form"
+          method: "form",
+          lead_source_page: leadSourcePage
         },
         getPageParams()
       )
