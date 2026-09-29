@@ -41,7 +41,11 @@
     } else if (href.indexOf("#contact") !== -1) {
       sendEvent("consultation_click", params);
       try {
-        sessionStorage.setItem("zh_lead_source", window.location.pathname);
+        var path = window.location.pathname;
+        var existing = sessionStorage.getItem("zh_lead_source");
+        if (path !== "/" && path !== "/index.html" && path !== "/english.html" && !existing) {
+          sessionStorage.setItem("zh_lead_source", path);
+        }
       } catch (e) {}
     }
   }, true);
