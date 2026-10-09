@@ -866,7 +866,7 @@ var _hmt = _hmt || [];
 <section class="cta-banner">
   <div class="container">
     <h2>有跨境资产问题？我们帮您理清每一步</h2>
-    <p>免费咨询，了解您的具体情况和最优解决方案</p>
+    <p>免费咨询，先帮您判断可行的处理路径</p>
     <div class="btn-group">
       <a href="#contact" class="btn btn-primary">预约咨询</a>
       <a href="tel:17321099752" class="btn btn-outline">&#9742; 173 2109 9752 / 137 7445 0050</a>
@@ -906,16 +906,21 @@ var _hmt = _hmt || [];
         </div>
       </div>
       <div class="fade-in-right">
-        <h3>在线预约</h3>
-        <p style="margin-bottom:1.5rem;">请简要描述您的情况和需求，我们会在收到后尽快联系您。</p>
+        <h3>在线咨询</h3>
+        <p style="margin-bottom:.8rem;">不用写得很完整。先把这三件事告诉我们，就能初步判断该走哪条路：</p>
+        <ul style="margin:0 0 1.2rem 1.1rem;font-size:.9rem;line-height:1.9;">
+          <li>您现在所在的国家或地区；</li>
+          <li>财产在哪个城市（房产、存款或股票）；</li>
+          <li>现在卡在哪一步：有人不签字、文件没办齐，还是不确定要不要回国。</li>
+        </ul>
         <form class="contact-form" id="contactForm">
           <input type="hidden" name="access_key" value="cf6eede3-5ba7-4cbc-81ad-c5067db4349c">
           <input type="hidden" name="subject" value="New Inquiry from Website (Chinese)">
           <input type="hidden" name="from_name" value="Zhao Haiying Law Website">
           <input type="checkbox" name="botcheck" style="display:none">
           <input type="text" name="name" placeholder="您的姓名" required>
-          <input type="tel" name="phone" placeholder="联系电话（手机/国际号码）" required>
-          <input type="email" name="email" placeholder="邮箱（选填）">
+          <input type="tel" name="phone" placeholder="联系电话（手机 / 国际号码）">
+          <input type="email" name="email" placeholder="邮箱（电话和邮箱至少填一项）">
           <select name="service">
             <option value="">请选择服务类型</option>
             <option>涉外继承</option>
@@ -925,12 +930,13 @@ var _hmt = _hmt || [];
             <option>其他涉外民事</option>
           </select>
           <textarea name="message" placeholder="请简要描述您的案情或需求（选填）例如：我在美国，父母在上海有房产需要继承..."></textarea>
-          <button type="submit" class="btn btn-navy">提交预约</button>
+          <button type="submit" class="btn btn-navy">提交咨询</button>
+          <p style="font-size:.78rem;color:var(--gray-600);margin-top:.7rem;line-height:1.6;">您提供的信息只用于本次咨询，不会用于其他用途，也不会对外披露。</p>
         </form>
         <div class="form-success" id="formSuccess">
           <span class="check">&#10004;&#65039;</span>
-          <h4>预约已提交</h4>
-          <p>我们会在24小时内与您联系。紧急情况请直接拨打 <strong><a href="tel:17321099752" style="color:var(--gold);">173 2109 9752</a></strong>。</p>
+          <h4>咨询已提交</h4>
+          <p>我们收到后会尽快与您联系。事情比较急的，可以直接拨打 <strong><a href="tel:17321099752" style="color:var(--gold);">173 2109 9752</a></strong>，或加微信（同号）。</p>
         </div>
       </div>
     </div>
@@ -1075,6 +1081,13 @@ document.addEventListener('DOMContentLoaded', function() {
   if (contactForm) {
     contactForm.addEventListener("submit", function(e) {
       e.preventDefault();
+      var phoneEl = contactForm.querySelector("input[name=phone]");
+      var mailEl = contactForm.querySelector("input[name=email]");
+      if (phoneEl && mailEl && !phoneEl.value.trim() && !mailEl.value.trim()) {
+        alert("请至少留一个联系方式：电话或邮箱，方便我们回复您。");
+        phoneEl.focus();
+        return;
+      }
       var btn = contactForm.querySelector("button[type=submit]");
       btn.disabled = true;
       btn.textContent = "提交中...";

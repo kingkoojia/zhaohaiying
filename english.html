@@ -1096,15 +1096,20 @@ var _hmt = _hmt || [];
       </div>
       <div class="fade-in-right">
         <h3>Online Inquiry</h3>
-        <p style="margin-bottom:1.5rem;">Briefly describe your situation and we'll respond within 24 hours.</p>
+        <p style="margin-bottom:.8rem;">You do not need to write everything. Tell us these three things first and we can tell you which route fits:</p>
+        <ul style="margin:0 0 1.2rem 1.1rem;font-size:.9rem;line-height:1.9;">
+          <li>The country or region you are in now;</li>
+          <li>The city where the assets are (property, bank deposits, or shares);</li>
+          <li>Where it is stuck: an heir refusing to sign, documents not ready, or whether you need to travel to China.</li>
+        </ul>
         <form class="contact-form" id="contactForm">
   <input type="hidden" name="access_key" value="cf6eede3-5ba7-4cbc-81ad-c5067db4349c">
   <input type="hidden" name="subject" value="New Inquiry from Website (English)">
   <input type="hidden" name="from_name" value="Zhao Haiying Law Website">
   <input type="checkbox" name="botcheck" style="display:none">
   <input type="text" name="name" placeholder="Your Name" required>
-  <input type="tel" name="phone" placeholder="Phone Number (including country code)" required>
-  <input type="email" name="email" placeholder="Email (optional)">
+  <input type="tel" name="phone" placeholder="Phone (including country code)">
+  <input type="email" name="email" placeholder="Email (phone or email, at least one)">
   <select name="service">
     <option value="">Select Service Type</option>
     <option>Cross-Border Inheritance</option>
@@ -1114,12 +1119,13 @@ var _hmt = _hmt || [];
     <option>Other Cross-Border Civil Matter</option>
   </select>
   <textarea name="message" placeholder="Briefly describe your situation (optional) e.g.: I am in Canada and need to inherit property in Shanghai..."></textarea>
-  <button type="submit" class="btn btn-navy">Submit Inquiry</button>
+  <button type="submit" class="btn btn-navy">Send Inquiry</button>
+  <p style="font-size:.78rem;color:var(--gray-600);margin-top:.7rem;line-height:1.6;">What you send is used only to answer this inquiry. We do not use it for anything else and do not disclose it.</p>
 </form>
         <div class="form-success" id="formSuccess">
           <span class="check">&#10004;&#65039;</span>
           <h4>Inquiry Submitted</h4>
-          <p>We will contact you within 24 hours. For urgent matters, please call <strong><a href="tel:17321099752" style="color:var(--gold);">+86 173 2109 9752</a></strong>.</p>
+          <p>We will get back to you as soon as we can. For urgent matters, call <strong><a href="tel:17321099752" style="color:var(--gold);">+86 173 2109 9752</a></strong> or add WeChat on the same number.</p>
         </div>
       </div>
     </div>
@@ -1248,6 +1254,13 @@ document.addEventListener('DOMContentLoaded', function() {
   if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
       e.preventDefault();
+      var phoneEl = contactForm.querySelector('input[name=phone]');
+      var mailEl = contactForm.querySelector('input[name=email]');
+      if (phoneEl && mailEl && !phoneEl.value.trim() && !mailEl.value.trim()) {
+        alert('Please leave at least one way to reach you: phone or email.');
+        phoneEl.focus();
+        return;
+      }
       var btn = contactForm.querySelector('button[type=submit]');
       btn.disabled = true;
       btn.textContent = 'Submitting...';
