@@ -160,6 +160,13 @@ footer{background:var(--navy);color:var(--white);padding:30px 0 20px}
 body{padding-bottom:60px}
 @media(min-width:769px){.mobile-bar{display:none}}
 
+/* 悬浮联系按钮（手机端一键拨号 / 复制微信号） */
+.fab{position:fixed;right:16px;bottom:88px;display:flex;flex-direction:column;gap:12px;z-index:999}
+.fab-btn{width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.3rem;box-shadow:0 4px 20px rgba(15,27,45,.2);text-decoration:none;transition:all .3s ease}
+.fab-btn.phone{background:linear-gradient(135deg,#4CAF50,#45a049);color:#fff}
+.fab-btn.wechat{background:linear-gradient(135deg,#07C160,#06ad56);color:#fff}
+@media(max-width:768px){.fab{bottom:84px;right:14px}.fab-btn{width:50px;height:50px;font-size:1.2rem}}
+
 .article-meta{display:flex;align-items:center;gap:12px;justify-content:center;margin-top:10px;flex-wrap:wrap}
 .pub-date{font-size:.8rem;color:rgba(255,255,255,.6)}
 </style>
@@ -216,7 +223,7 @@ body{padding-bottom:60px}
 <h2>三、协商和调解：成本最低的第一步</h2>
 <p>协商仍然是首选，民法典第一千一百三十二条也把它排在调解和诉讼之前。境外继承人的实际困难是时差、距离和语言，反复打电话往往越谈越乱。比较有效的做法是先做一份书面分配方案，把遗产范围、每位继承人的份额、份额的计算依据、办理的先后顺序写清楚，再让各方在上面表态。有具体文本，沟通才有落点。</p>
 <p>协商不成，可以申请人民调解委员会调解。调解达成协议后，为避免事后反悔，通常还要把协议内容固定下来再办后续手续，具体方式以当地调解组织和办理机构的要求为准。</p>
-<p>如果你正卡在签字或者送达这一步，可以先说明继承人的分布国家和地区、遗产所在城市，再判断走调解还是诉讼更合适。电话 173 2109 9752，微信同号，邮箱 zhaohaiying@lantai.cn。</p>
+<p>如果你正卡在签字或者送达这一步，可以先说明继承人的分布国家和地区、遗产所在城市，再判断走调解还是诉讼更合适。电话 <a href="tel:17321099752">173 2109 9752</a>，微信同号，邮箱 <a href="mailto:zhaohaiying@lantai.cn">zhaohaiying@lantai.cn</a>。</p>
 
 <h2>四、诉讼：由哪个法院管，判决后能办什么</h2>
 <p>继承纠纷的管辖是专属管辖。《中华人民共和国民事诉讼法》第三十四条规定，因继承遗产纠纷提起的诉讼，由被继承人死亡时住所地或者主要遗产所在地人民法院管辖。被继承人在上海去世、主要遗产是上海房产的，起诉通常在上海的法院进行。</p>
@@ -287,6 +294,29 @@ body{padding-bottom:60px}
   <a href="/#contact"><span class="bar-icon">&#128222;</span>联系</a>
   <a href="en-article-inheritance-dispute-cooperation.html" onclick="document.cookie='lang_choice=en;path=/;max-age=31536000'"><span class="bar-icon">&#127760;</span>EN</a>
 </nav>
+<div class="fab">
+  <a class="fab-btn phone" href="tel:17321099752" aria-label="电话咨询">&#9742;</a>
+  <a class="fab-btn wechat" id="wechatBtn" href="javascript:void(0)" aria-label="微信联系">&#128172;</a>
+</div>
+<script>
+  var wechatBtn = document.getElementById('wechatBtn');
+  if (wechatBtn) {
+    wechatBtn.addEventListener('click', function (e) {
+      e.preventDefault();
+      var input = document.createElement('input');
+      input.value = '17321099752';
+      document.body.appendChild(input);
+      input.select();
+      document.execCommand('copy');
+      document.body.removeChild(input);
+      var toast = document.createElement('div');
+      toast.textContent = '微信号已复制：17321099752';
+      toast.style.cssText = 'position:fixed;bottom:96px;left:50%;transform:translateX(-50%);background:rgba(0,0,0,.82);color:#fff;padding:10px 22px;border-radius:8px;font-size:.9rem;z-index:9999';
+      document.body.appendChild(toast);
+      setTimeout(function () { toast.style.opacity = '0'; setTimeout(function () { document.body.removeChild(toast); }, 300); }, 1600);
+    });
+  }
+</script>
 <!-- GOOGLE_ANALYTICS -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QZ7BL887VY"></script>
 <script>

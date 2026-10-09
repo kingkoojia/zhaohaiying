@@ -143,6 +143,13 @@ footer{background:var(--navy);color:var(--white);padding:30px 0 20px}
 body{padding-bottom:60px}
 @media(min-width:769px){.mobile-bar{display:none}}
 
+/* 悬浮联系按钮（手机端一键拨号 / 复制微信号） */
+.fab{position:fixed;right:16px;bottom:88px;display:flex;flex-direction:column;gap:12px;z-index:999}
+.fab-btn{width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.3rem;box-shadow:0 4px 20px rgba(15,27,45,.2);text-decoration:none;transition:all .3s ease}
+.fab-btn.phone{background:linear-gradient(135deg,#4CAF50,#45a049);color:#fff}
+.fab-btn.wechat{background:linear-gradient(135deg,#07C160,#06ad56);color:#fff}
+@media(max-width:768px){.fab{bottom:84px;right:14px}.fab-btn{width:50px;height:50px;font-size:1.2rem}}
+
 .article-meta{display:flex;align-items:center;gap:12px;justify-content:center;margin-top:10px;flex-wrap:wrap}
 .pub-date{font-size:.8rem;color:rgba(255,255,255,.6)}
 </style>
@@ -234,6 +241,30 @@ body{padding-bottom:60px}
   <a href="/#contact"><span class="bar-icon">&#128222;</span>联系</a>
   <a href="english.html" onclick="document.cookie='lang_choice=en;path=/;max-age=31536000'"><span class="bar-icon">&#127760;</span>EN</a>
 </nav>
+
+<div class="fab">
+  <a class="fab-btn phone" href="tel:17321099752" aria-label="电话咨询">&#9742;</a>
+  <a class="fab-btn wechat" id="wechatBtn" href="javascript:void(0)" aria-label="微信联系">&#128172;</a>
+</div>
+<script>
+  var wechatBtn = document.getElementById('wechatBtn');
+  if (wechatBtn) {
+    wechatBtn.addEventListener('click', function (e) {
+      e.preventDefault();
+      var input = document.createElement('input');
+      input.value = '17321099752';
+      document.body.appendChild(input);
+      input.select();
+      document.execCommand('copy');
+      document.body.removeChild(input);
+      var toast = document.createElement('div');
+      toast.textContent = '微信号已复制：17321099752';
+      toast.style.cssText = 'position:fixed;bottom:96px;left:50%;transform:translateX(-50%);background:rgba(0,0,0,.82);color:#fff;padding:10px 22px;border-radius:8px;font-size:.9rem;z-index:9999';
+      document.body.appendChild(toast);
+      setTimeout(function () { toast.style.opacity = '0'; setTimeout(function () { document.body.removeChild(toast); }, 300); }, 1600);
+    });
+  }
+</script>
 
 <!-- GOOGLE_ANALYTICS -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QZ7BL887VY"></script>
