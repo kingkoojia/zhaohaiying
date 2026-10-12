@@ -207,6 +207,9 @@ header.scrolled{box-shadow:0 2px 30px rgba(0,0,0,.08)}
 .hero-news:hover{color:var(--gold-light)}
 .hero-actions{display:flex;gap:1rem;flex-wrap:wrap}
 .hero-stats{display:flex;gap:3rem;margin-top:3rem;padding-top:2rem;border-top:1px solid rgba(255,255,255,.08)}
+.hero-tags{display:flex;flex-wrap:wrap;gap:.7rem 1.6rem;margin-top:3rem;padding-top:2rem;border-top:1px solid rgba(255,255,255,.08);justify-content:center}
+.hero-tags span{display:inline-flex;align-items:center;gap:.5rem;font-size:1rem;color:rgba(255,255,255,.88)}
+.hero-tags span::before{content:"\2713";color:var(--gold);font-weight:700}
 .hero-stat .num{font-family:var(--font-serif);font-size:2.2rem;font-weight:700;color:var(--gold);line-height:1;margin-bottom:4px}
 .hero-stat .label{font-size:.8rem;color:rgba(255,255,255,.5);margin-bottom:0}
 @media(max-width:768px){
@@ -216,6 +219,8 @@ header.scrolled{box-shadow:0 2px 30px rgba(0,0,0,.08)}
   .hero p{max-width:100%;margin-left:auto;margin-right:auto}
   .hero-actions{justify-content:center}
   .hero-stats{justify-content:center;gap:.8rem;padding-right:56px;padding-left:8px}
+  .hero-tags{gap:.45rem 1rem;padding-right:24px;padding-left:24px;margin-top:2rem;padding-top:1.4rem}
+  .hero-tags span{font-size:.9rem}
   .hero-stat{flex:1;min-width:0;text-align:center}
   .hero-stat .num{font-size:1.6rem}
   .hero-stat .label{font-size:.75rem}
@@ -550,10 +555,11 @@ var _hmt = _hmt || [];
         <a href="#contact" class="btn btn-primary">预约咨询</a>
         <a href="#services" class="btn btn-outline">了解服务</a>
       </div>
-      <div class="hero-stats">
-        <div class="hero-stat"><div class="num" data-count="15">0</div><p class="label">年执业经验</p></div>
-        <div class="hero-stat"><div class="num" data-count="300">0</div><p class="label">涉外案件经验</p></div>
-        <div class="hero-stat"><div class="num" data-count="98">0</div><p class="label">客户满意度%</p></div>
+      <div class="hero-tags">
+        <span>多年执业经验</span>
+        <span>涉外案件办理经验</span>
+        <span>中英双语</span>
+        <span>远程委托办理</span>
       </div>
     </div>
   </div>
