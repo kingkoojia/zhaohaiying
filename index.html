@@ -207,9 +207,13 @@ header.scrolled{box-shadow:0 2px 30px rgba(0,0,0,.08)}
 .hero-news:hover{color:var(--gold-light)}
 .hero-actions{display:flex;gap:1rem;flex-wrap:wrap}
 .hero-stats{display:flex;gap:3rem;margin-top:3rem;padding-top:2rem;border-top:1px solid rgba(255,255,255,.08)}
-.hero-tags{display:flex;flex-wrap:wrap;gap:.7rem 1.6rem;margin-top:3rem;padding-top:2rem;border-top:1px solid rgba(255,255,255,.08);justify-content:center}
-.hero-tags span{display:inline-flex;align-items:center;gap:.5rem;font-size:1rem;color:rgba(255,255,255,.88)}
-.hero-tags span::before{content:"\2713";color:var(--gold);font-weight:700}
+.hero-tiles{margin-top:3rem;padding-top:2rem;border-top:1px solid rgba(255,255,255,.08)}
+.hero-tiles .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.hero-tiles .grid>div{text-align:center;padding:2px 6px;border-left:1px solid rgba(255,255,255,.09)}
+.hero-tiles .grid>div:first-child{border-left:none}
+.hero-tiles .big{display:block;font-family:var(--font-serif);font-weight:700;color:var(--gold);font-size:1.55rem;line-height:1.15;letter-spacing:.04em;margin-bottom:7px;white-space:nowrap}
+.hero-tiles .big.num{font-size:2.1rem;letter-spacing:0}
+.hero-tiles .sub{display:block;color:rgba(255,255,255,.6);font-size:.8rem;line-height:1.6}
 .hero-stat .num{font-family:var(--font-serif);font-size:2.2rem;font-weight:700;color:var(--gold);line-height:1;margin-bottom:4px}
 .hero-stat .label{font-size:.8rem;color:rgba(255,255,255,.5);margin-bottom:0}
 @media(max-width:768px){
@@ -219,8 +223,12 @@ header.scrolled{box-shadow:0 2px 30px rgba(0,0,0,.08)}
   .hero p{max-width:100%;margin-left:auto;margin-right:auto}
   .hero-actions{justify-content:center}
   .hero-stats{justify-content:center;gap:.8rem;padding-right:56px;padding-left:8px}
-  .hero-tags{gap:.45rem 1rem;padding-right:24px;padding-left:24px;margin-top:2rem;padding-top:1.4rem}
-  .hero-tags span{font-size:.9rem}
+  .hero-tiles{margin-top:2rem;padding-top:1.4rem}
+  .hero-tiles .grid{grid-template-columns:1fr 1fr;gap:16px 0}
+  .hero-tiles .grid>div:nth-child(odd){border-left:none}
+  .hero-tiles .big{font-size:1.15rem}
+  .hero-tiles .big.num{font-size:1.6rem}
+  .hero-tiles .sub{font-size:.72rem}
   .hero-stat{flex:1;min-width:0;text-align:center}
   .hero-stat .num{font-size:1.6rem}
   .hero-stat .label{font-size:.75rem}
@@ -555,11 +563,13 @@ var _hmt = _hmt || [];
         <a href="#contact" class="btn btn-primary">预约咨询</a>
         <a href="#services" class="btn btn-outline">了解服务</a>
       </div>
-      <div class="hero-tags">
-        <span>多年执业经验</span>
-        <span>涉外案件办理经验</span>
-        <span>中英双语</span>
-        <span>远程委托办理</span>
+      <div class="hero-tiles">
+        <div class="grid">
+          <div><b class="big num">18年</b><span class="sub">执业经验</span></div>
+          <div><b class="big">继承 · 变现</b><span class="sub">房产 · 存款 · 资金汇出</span></div>
+          <div><b class="big">中英双语</b><span class="sub">无需翻译转述</span></div>
+          <div><b class="big">远程委托</b><span class="sub">境外签署，境内办理</span></div>
+        </div>
       </div>
     </div>
   </div>
@@ -593,7 +603,7 @@ var _hmt = _hmt || [];
         上海市律师协会企业合规专业委员会委员<br>
         中国遗产管理师<br>
         上海市张江公证处遗产管理人专家库专家</p>
-        <p><strong>十八年，三百余案的经验是：跨境法律服务，法条是起点，核心是处事逻辑</strong></p>
+<p><strong>十八年、数百件涉外案件的经验是：跨境法律服务，法条是起点，核心是处事逻辑</strong></p>
         <p>做企业服务，我习惯走在流程前面。从新设、并购到合规解散，提前判断监管节奏，帮企业在问题出现之前就避开风险。</p>
         <p>做资产处置，最忌讳分散着办。房产、股权、资金出境，分开跑、反复补材料，周期被无限拉长。全部拉到一条线上同步推进，效率完全不一样。</p>
         <p>做家事案件，则又不同，商事讲效率，家事讲人心。当事人身在海外，对国内的办案程序不熟悉，最需要的不是法条解释，而是一份清晰的路线图：现在在哪个环节、下一步做什么、还有多久。沟通和结果同样重要。</p>
@@ -602,7 +612,7 @@ var _hmt = _hmt || [];
         <p>现美国江苏总商会上海联络处的落地，这些资源、判断有了更稳定的输出通道</p>
         <p><strong>寄语：一个委托，全程对接——让复杂的问题，有确定的答案。</strong></p>
         <div class="credentials">
-          <span>合伙人</span><span>联络处主任</span><span>涉外民商事</span><span>15+年经验</span><span>300+案例</span>
+<span>合伙人</span><span>联络处主任</span><span>涉外民商事</span><span>18年执业经验</span><span>数百件涉外案件</span>
         </div>
       </div>
     </div>
@@ -1060,28 +1070,6 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     }, { threshold: 0.08 });
     animEls.forEach(function(el) { observer.observe(el); });
-  }
-
-  // Counter animation
-  var counters = document.querySelectorAll('.num[data-count]');
-  if (counters.length > 0 && 'IntersectionObserver' in window) {
-    var counterObserver = new IntersectionObserver(function(entries, obs) {
-      entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-          var el = entry.target;
-          var target = parseInt(el.getAttribute('data-count'), 10);
-          var current = 0;
-          var step = Math.max(1, Math.floor(target / 60));
-          var timer = setInterval(function() {
-            current += step;
-            if (current >= target) { current = target; clearInterval(timer); }
-            el.textContent = current + (target === 98 ? '' : '+');
-          }, 30);
-          obs.unobserve(el);
-        }
-      });
-    }, { threshold: 0.5 });
-    counters.forEach(function(el) { counterObserver.observe(el); });
   }
 
   // Contact form

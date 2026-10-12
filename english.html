@@ -318,8 +318,12 @@ header.scrolled{box-shadow:0 2px 30px rgba(0,0,0,.08)}
   .hero-news{display:none}
   .hero{min-height:80vh;text-align:center}.hero-content{max-width:100%}.hero p{max-width:100%;margin-left:auto;margin-right:auto}.hero-actions{justify-content:center}
   .hero-stats{justify-content:center;gap:.8rem;padding-right:56px;padding-left:8px}
-  .hero-tags{gap:.45rem 1rem;padding-right:24px;padding-left:24px;margin-top:2rem;padding-top:1.4rem}
-  .hero-tags span{font-size:.9rem}
+  .hero-tiles{margin-top:2rem;padding-top:1.4rem}
+  .hero-tiles .grid{grid-template-columns:1fr 1fr;gap:16px 0}
+  .hero-tiles .grid>div:nth-child(odd){border-left:none}
+  .hero-tiles .big{font-size:1.15rem}
+  .hero-tiles .big.num{font-size:1.6rem}
+  .hero-tiles .sub{font-size:.72rem}
   .hero-stat{flex:1;min-width:0;text-align:center}
   .hero-stat .num{font-size:1.5rem}
   .hero-stat .label{font-size:.75rem}
@@ -642,11 +646,13 @@ var _hmt = _hmt || [];
         <a href="#contact" class="btn btn-primary">Book a Consultation</a>
         <a href="#services" class="btn btn-outline">Our Services</a>
       </div>
-<div class="hero-tags">
-<span>Years in practice</span>
-<span>Cross-border cases</span>
-<span>Bilingual</span>
-<span>Remote instructions</span>
+<div class="hero-tiles">
+<div class="grid">
+<div><b class="big num">18 yrs</b><span class="sub">In practice</span></div>
+<div><b class="big">Inheritance</b><span class="sub">Property · Deposits · Remittance</span></div>
+<div><b class="big">Bilingual</b><span class="sub">No translation needed</span></div>
+<div><b class="big">Remote</b><span class="sub">Sign abroad, we file in China</span></div>
+</div>
 </div>
     </div>
   </div>
@@ -723,14 +729,14 @@ var _hmt = _hmt || [];
         Director, USA Jiangsu Chamber Shanghai Liaison Office<br>
         Member, Shanghai Bar Association Corporate Compliance Committee<br>
         LL.M. &amp; MBA</p>
-        <p><strong>18 years, 300+ cases. In cross-border legal services, the law is just the starting point — what really matters is understanding how things work on the ground.</strong></p>
+        <p><strong>18 years, hundreds of cases. In cross-border legal services, the law is just the starting point — what really matters is understanding how things work on the ground.</strong></p>
         <p>For corporate clients, I stay ahead of the process. From company formation to dissolution, I anticipate regulatory bottlenecks and keep businesses on the right side of the rules.</p>
         <p>For asset disposal, fragmented execution is the biggest trap — real estate, equity, fund repatriation handled separately means endless delays. I consolidate everything into one streamlined track.</p>
         <p>Family cases are different. Clients abroad don't know China's procedures. What they need is a clear timeline and simple instructions — what to do, when, and how long it takes. Communication matters as much as the result.</p>
         <p>In criminal cases, timing is everything. One day can change the outcome.</p>
         <p>Years of cooperation with notary offices, land registries, market regulators, and foreign exchange authorities make this possible. With the Shanghai Liaison Office, these resources now have a stable channel — one mandate, end-to-end, turning complexity into clarity.</p>
         <div class="credentials">
-            <span>Partner</span><span>Liaison Office Director</span><span>Cross-Border Legal Services</span><span>15+ Years</span><span>300+ Cases</span>
+<span>Partner</span><span>Liaison Office Director</span><span>Cross-Border Legal Services</span><span>18 Years in Practice</span><span>Hundreds of Cases</span>
         </div>
         <p style="margin-top:1.2rem"><a href="/en-zhao-haiying/" style="color:var(--gold);font-weight:600;">Full Lawyer Profile &#8594;</a></p>
       </div>
@@ -1235,26 +1241,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }, { threshold: 0.08 });
     animEls.forEach(function(el) { observer.observe(el); });
   }
-  var counters = document.querySelectorAll('.num[data-count]');
-  if (counters.length > 0 && 'IntersectionObserver' in window) {
-    var counterObserver = new IntersectionObserver(function(entries, obs) {
-      entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-          var el = entry.target;
-          var target = parseInt(el.getAttribute('data-count'), 10);
-          var current = 0;
-          var step = Math.max(1, Math.floor(target / 60));
-          var timer = setInterval(function() {
-            current += step;
-            if (current >= target) { current = target; clearInterval(timer); }
-            el.textContent = current + (target === 98 ? '' : '+');
-          }, 30);
-          obs.unobserve(el);
-        }
-      });
-    }, { threshold: 0.5 });
-    counters.forEach(function(el) { counterObserver.observe(el); });
-  }
   if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
       e.preventDefault();
@@ -1315,6 +1301,10 @@ document.addEventListener('DOMContentLoaded', function() {
 </body>
 </html>
 .hero-stats{display:flex;gap:3rem;margin-top:3rem;padding-top:2rem;border-top:1px solid rgba(255,255,255,.08)}
-.hero-tags{display:flex;flex-wrap:wrap;gap:.7rem 1.6rem;margin-top:3rem;padding-top:2rem;border-top:1px solid rgba(255,255,255,.08);justify-content:center}
-.hero-tags span{display:inline-flex;align-items:center;gap:.5rem;font-size:1rem;color:rgba(255,255,255,.88)}
-.hero-tags span::before{content:"\2713";color:var(--gold);font-weight:700}
+.hero-tiles{margin-top:3rem;padding-top:2rem;border-top:1px solid rgba(255,255,255,.08)}
+.hero-tiles .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.hero-tiles .grid>div{text-align:center;padding:2px 6px;border-left:1px solid rgba(255,255,255,.09)}
+.hero-tiles .grid>div:first-child{border-left:none}
+.hero-tiles .big{display:block;font-family:var(--font-serif);font-weight:700;color:var(--gold);font-size:1.55rem;line-height:1.15;letter-spacing:.04em;margin-bottom:7px;white-space:nowrap}
+.hero-tiles .big.num{font-size:2.1rem;letter-spacing:0}
+.hero-tiles .sub{display:block;color:rgba(255,255,255,.6);font-size:.8rem;line-height:1.6}
