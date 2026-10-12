@@ -50,6 +50,7 @@ The main website is available at: [zhaohaiyinglvshi.com](https://zhaohaiyinglvsh
 - [跨境婚姻家事法律问题解析](https://zhaohaiyinglvshi.com/cross-border-family.html)
 - [双法域财富传承规划实务](https://zhaohaiyinglvshi.com/estate-planning.html)
 - [外籍人士在华资产变现与资金出境](https://zhaohaiyinglvshi.com/fund-transfer.html)
+- [中国境内继承与遗产处置：海外继承人怎么办（服务主页）](https://zhaohaiyinglvshi.com/inheritance.html)
 - [美国江苏总商会上海联络处授牌仪式](https://zhaohaiyinglvshi.com/news-liaison-office.html)
 - [Overseas Inheritance Documents Checklist](https://zhaohaiyinglvshi.com/en-article-inheritance-documents.html)
 - [China Property Sale Remittance Pitfalls](https://zhaohaiyinglvshi.com/en-article-fund-remittance-pitfalls.html)
@@ -82,4 +83,5 @@ The main website is available at: [zhaohaiyinglvshi.com](https://zhaohaiyinglvsh
 - [WOFE Dissolution and Liquidation in China (English Case)](https://zhaohaiyinglvshi.com/en-case-wofe-dissolution-liquidation.html)
 - [Dual-Jurisdiction Wealth Succession Planning](https://zhaohaiyinglvshi.com/en-estate-planning.html)
 - [Asset Liquidation and Fund Repatriation](https://zhaohaiyinglvshi.com/en-fund-transfer.html)
+- [Inheriting Property and Assets in China: A Guide for Overseas Heirs](https://zhaohaiyinglvshi.com/en-inheritance.html)
 - [USA Jiangsu Chamber Shanghai Liaison Office](https://zhaohaiyinglvshi.com/en-news-liaison-office.html)
