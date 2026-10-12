@@ -5,14 +5,49 @@ Disallow: /images/docx_temp/
 Sitemap: https://zhaohaiyinglvshi.com/sitemap.xml
 
 # AI crawlers
+# 说明：显式列出 AI 抓取方，让「被 AI 引用」这条路不被误伤；
+# 每段都要重复 Disallow，因为显式段落会覆盖上面的 * 段。
 User-agent: GPTBot
 Allow: /
 Disallow: /seo-report-
+Disallow: /images/docx_temp/
+
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /seo-report-
+Disallow: /images/docx_temp/
+
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /seo-report-
+Disallow: /images/docx_temp/
 
 User-agent: ClaudeBot
 Allow: /
 Disallow: /seo-report-
+Disallow: /images/docx_temp/
 
 User-agent: PerplexityBot
 Allow: /
 Disallow: /seo-report-
+Disallow: /images/docx_temp/
+
+User-agent: Google-Extended
+Allow: /
+Disallow: /seo-report-
+Disallow: /images/docx_temp/
+
+User-agent: Applebot-Extended
+Allow: /
+Disallow: /seo-report-
+Disallow: /images/docx_temp/
+
+User-agent: Bytespider
+Allow: /
+Disallow: /seo-report-
+Disallow: /images/docx_temp/
+
+User-agent: CCBot
+Allow: /
+Disallow: /seo-report-
+Disallow: /images/docx_temp/
