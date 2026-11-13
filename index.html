@@ -282,13 +282,15 @@ header.scrolled{box-shadow:0 2px 30px rgba(0,0,0,.08)}
 
 /* Cases */
 .case-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px}
-.case-card{background:var(--white);border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow);border:1px solid var(--gray-200);transition:all .3s ease}
+.case-card{display:block;background:var(--white);border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow);border:1px solid var(--gray-200);transition:all .3s ease;text-decoration:none;color:inherit}
 .case-card:hover{box-shadow:var(--shadow-lg);transform:translateY(-3px)}
+.case-card:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
 .case-card-body{padding:1.8rem}
 .case-card .region{font-size:.75rem;color:var(--gold);font-weight:600;text-transform:uppercase;letter-spacing:.1em;margin-bottom:.5rem}
 .case-card h4{color:var(--navy);margin-bottom:.5rem}
 .case-card p{font-size:.85rem;margin-bottom:0}
 .case-card .case-tag{display:inline-block;background:var(--cream);color:var(--navy);font-size:.75rem;padding:2px 10px;border-radius:100px;margin-top:.8rem;font-weight:500;margin-right:4px}
+.case-card .case-card-link{display:inline-flex;align-items:center;min-height:44px;margin-top:.75rem;color:var(--navy);font-size:.85rem;font-weight:700}
 
 /* FAQ */
 .faq-list{max-width:800px;margin:0 auto}
@@ -626,14 +628,15 @@ var _hmt = _hmt || [];
   <div class="container">
     <div class="section-title fade-in"><h2>典型案例</h2><p>脱敏展示，彰显专业实力</p></div>
     <div class="case-grid">
-      <div class="case-card fade-in">
+      <a class="case-card fade-in" href="case-usa-inheritance-shanghai-property.html" aria-label="查看在美华侨继承上海房产案详细解读">
         <div class="case-card-body">
           <div class="region">美国</div>
           <h4>在美华侨继承上海房产案</h4>
           <p>委托人旅居美国30年，父母在上海留有一套房产。通过远程委托公证方式，协助完成继承权公证、不动产过户登记，全程无需委托人回国。</p>
           <span class="case-tag">涉外继承</span><span class="case-tag">远程委托</span>
+          <span class="case-card-link">查看案例解读 →</span>
         </div>
-      </div>
+      </a>
       <div class="case-card fade-in">
         <div class="case-card-body">
           <div class="region">加拿大</div>

@@ -382,13 +382,15 @@ header.scrolled{box-shadow:0 2px 30px rgba(0,0,0,.08)}
 .testimonial-card .meta{font-size:.8rem;color:var(--gray-600)}
 .testimonial-card .stars{color:var(--gold);font-size:.9rem;margin-bottom:.5rem;letter-spacing:2px}
 .case-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px}
-.case-card{background:var(--white);border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow);border:1px solid var(--gray-200);transition:all .3s ease}
+.case-card{display:block;background:var(--white);border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow);border:1px solid var(--gray-200);transition:all .3s ease;text-decoration:none;color:inherit}
 .case-card:hover{box-shadow:var(--shadow-lg);transform:translateY(-3px)}
+.case-card:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
 .case-card-body{padding:1.8rem}
 .case-card .region{font-size:.75rem;color:var(--gold);font-weight:600;text-transform:uppercase;letter-spacing:.1em;margin-bottom:.5rem}
 .case-card h4{color:var(--navy);margin-bottom:.5rem}
 .case-card p{font-size:.85rem;margin-bottom:0}
 .case-card .case-tag{display:inline-block;background:var(--cream);color:var(--navy);font-size:.75rem;padding:2px 10px;border-radius:100px;margin-top:.8rem;font-weight:500;margin-right:4px}
+.case-card .case-card-link{display:inline-flex;align-items:center;min-height:44px;margin-top:.75rem;color:var(--navy);font-size:.85rem;font-weight:700}
 .faq-list{max-width:800px;margin:0 auto}
 .faq-item{border:1px solid var(--gray-200);border-radius:var(--radius);margin-bottom:.8rem;overflow:hidden}
 .faq-item:hover{border-color:var(--gray-300)}
@@ -762,6 +764,15 @@ var _hmt = _hmt || [];
   <div class="container">
     <div class="section-title fade-in"><h2>Featured Cases</h2><p>Anonymized representations of our work</p></div>
     <div class="case-grid">
+      <a class="case-card fade-in" href="en-case-usa-inheritance-shanghai-property.html" aria-label="Read the case note on a U.S.-based heir inheriting Shanghai property">
+        <div class="case-card-body">
+          <div class="region">United States</div>
+          <h4>Overseas Chinese Inheriting Shanghai Property</h4>
+          <p>A U.S.-based heir inherited a Shanghai property left by his parents. With authenticated documents and remote authorization, the inheritance notarization and property transfer were handled without the client returning to China.</p>
+          <span class="case-tag">Inheritance</span><span class="case-tag">Remote Authorization</span>
+          <span class="case-card-link">Read the case note →</span>
+        </div>
+      </a>
       <div class="case-card fade-in">
         <div class="case-card-body">
           <div class="region">United States</div>
