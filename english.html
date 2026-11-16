@@ -611,6 +611,59 @@ var _hmt = _hmt || [];
         transform: scale(0.9);  /* 在小屏上整体等比例缩小 10% */
     }
 }
+
+@media (max-width: 360px) {
+    html,
+    body {
+        overflow-x: hidden;
+    }
+
+    .fade-in-left,
+    .fade-in-right {
+        opacity: 1;
+        transform: none;
+    }
+
+    .case-grid,
+    .testimonial-grid,
+    .article-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .case-card,
+    .testimonial-card,
+    .article-card {
+        min-width: 0;
+        width: 100%;
+    }
+
+    .logo {
+        max-width: calc(100vw - 92px);
+        min-width: 0;
+    }
+
+    .logo-img {
+        height: 28px;
+    }
+
+    .logo-text,
+    .logo-name {
+        min-width: 0;
+    }
+
+    .logo-name {
+        font-size: .95rem;
+        white-space: nowrap;
+    }
+
+    .logo-sub {
+        display: none;
+    }
+
+    .hamburger {
+        flex-shrink: 0;
+    }
+}
 </style>
 
 <script src="https://analytics.ahrefs.com/analytics.js" data-key="Af80IqN3BOo7avSGm2vZsA" async></script>
