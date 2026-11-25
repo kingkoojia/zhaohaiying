@@ -21,6 +21,21 @@
     };
   }
 
+  function getLeadSourcePage() {
+    var leadSourcePage = window.location.pathname;
+    try {
+      var stored = sessionStorage.getItem("zh_lead_source");
+      if (stored) {
+        leadSourcePage = stored;
+      }
+    } catch (e) {}
+    return leadSourcePage;
+  }
+
+  function getFormName(form) {
+    return form.getAttribute("data-form-name") || form.id || "unnamed_form";
+  }
+
   document.addEventListener("click", function (event) {
     var target = event.target;
     var link = target && target.closest ? target.closest("a") : null;
@@ -50,21 +65,37 @@
     }
   }, true);
 
+  document.addEventListener("focusin", function (event) {
+    var target = event.target;
+    var field = target && target.closest ? target.closest("input, select, textarea, [contenteditable='true']") : null;
+    var form = field && field.closest ? field.closest("form") : null;
+
+    if (!form || form.getAttribute("data-form-start-tracked") === "true") {
+      return;
+    }
+
+    form.setAttribute("data-form-start-tracked", "true");
+    sendEvent(
+      "form_start",
+      Object.assign(
+        {
+          form_name: getFormName(form),
+          method: "form",
+          lead_source_page: getLeadSourcePage()
+        },
+        getPageParams()
+      )
+    );
+  }, true);
+
   window.zhaoTrackFormLead = function (formName) {
-    var leadSourcePage = window.location.pathname;
-    try {
-      var stored = sessionStorage.getItem("zh_lead_source");
-      if (stored) {
-        leadSourcePage = stored;
-      }
-    } catch (e) {}
     sendEvent(
       "generate_lead",
       Object.assign(
         {
           form_name: formName,
           method: "form",
-          lead_source_page: leadSourcePage
+          lead_source_page: getLeadSourcePage()
         },
         getPageParams()
       )
