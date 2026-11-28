@@ -116,23 +116,26 @@ img{max-width:100%;height:auto;display:block}
 .section-desc{color:var(--text-light);font-size:1rem}
 .section-dark .section-desc{color:rgba(255,255,255,.7)}
 /* Header */
-header{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(255,255,255,.97);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-bottom:1px solid rgba(0,0,0,.06)}
-.nav-inner{display:flex;align-items:center;justify-content:space-between;height:70px;max-width:var(--max-width);margin:0 auto;padding:0 24px}
-.logo{display:flex;align-items:center;gap:10px;font-family:var(--font-serif);font-size:1.1rem;font-weight:700;color:var(--navy);line-height:1.2}
-.logo-img{height:30px;width:auto}
+header{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(255,255,255,.97);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-bottom:1px solid rgba(0,0,0,.06);transition:var(--transition)}
+header.scrolled{box-shadow:0 2px 30px rgba(0,0,0,.08)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:72px;max-width:var(--max-width);margin:0 auto;padding:0 24px}
+.logo{display:flex;align-items:center;gap:10px;font-family:var(--font-serif);font-size:1.2rem;font-weight:700;color:var(--navy);line-height:1.2;flex-shrink:0}
+.logo-img{height:32px;width:auto}
 .logo-text{display:flex;flex-direction:column}
-.logo-name{font-size:1.1rem}
-.logo-sub{font-family:var(--font-sans);font-size:.62rem;font-weight:400;color:var(--gold);letter-spacing:.06em;line-height:1.3}
-.nav-links{display:flex;align-items:center;gap:1.4rem}
-.nav-links a{font-size:.86rem;color:var(--text);font-weight:500}
-.nav-links a:hover{color:var(--gold)}
-.nav-cta{background:var(--navy);color:var(--white)!important;padding:8px 20px;border-radius:var(--radius);font-weight:600}
+.logo-name{font-size:1.2rem}
+.logo-sub{font-family:var(--font-sans);font-size:.75rem;font-weight:400;color:var(--gold);letter-spacing:.08em;line-height:1.3}
+.nav-links{display:flex;align-items:center;gap:1.8rem}
+.nav-links a{font-size:.9rem;color:var(--text);font-weight:500;position:relative;padding:4px 0;line-height:1.7}
+.nav-links a::after{content:'';position:absolute;bottom:-2px;left:0;width:0;height:2px;background:var(--gold);transition:var(--transition);border-radius:1px}
+.nav-links a:hover::after,.nav-links a.active::after{width:100%}
+.nav-cta{background:var(--navy);color:var(--white)!important;padding:8px 20px!important;border-radius:var(--radius);font-weight:600}
+.nav-cta::after{display:none!important}
 .nav-cta:hover{background:var(--navy-light)!important}
-.lang-switch{border-left:1px solid var(--gray-200);padding-left:1rem;font-size:.8rem;color:var(--gray-600)}
+.lang-switch{line-height:1.7}
 .lang-switch a:hover{color:var(--gold)}
-.hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px}
+.hamburger{display:none;flex-direction:column;align-items:center;justify-content:center;gap:5px;cursor:pointer;background:none;border:none;padding:4px;min-width:44px;min-height:44px}
 .hamburger span{display:block;width:24px;height:2px;background:var(--navy);border-radius:1px;transition:var(--transition)}
-.mobile-menu{position:fixed;top:70px;left:0;right:0;background:var(--white);padding:1.2rem 24px 1.5rem;flex-direction:column;gap:4px;border-bottom:1px solid var(--gray-200);box-shadow:var(--shadow-lg);display:none;z-index:999}
+.mobile-menu{position:fixed;top:72px;left:0;right:0;background:var(--white);padding:1.2rem 24px 1.5rem;flex-direction:column;gap:4px;border-bottom:1px solid var(--gray-200);box-shadow:var(--shadow-lg);display:none;z-index:999}
 .mobile-menu.open{display:flex}
 .mobile-menu a{font-size:.95rem;color:var(--navy);padding:10px 0;border-bottom:1px solid var(--gray-100)}
 /* Hero */
@@ -247,6 +250,9 @@ footer{background:var(--navy);color:var(--white);padding:32px 0 22px}
   .nav-links{display:none}
   .hamburger{display:flex}
 }
+@media screen and (max-width:1366px){
+  .nav-links a{padding-left:8px!important;padding-right:8px!important;margin-left:5px!important;margin-right:5px!important;font-size:14px!important}
+}
 /* Small desktop: two-row header */
 @media (min-width: 769px) and (max-width: 1100px) {
   .nav-inner{flex-wrap:wrap!important;height:auto;padding-top:10px;padding-bottom:10px;gap:6px 0}
@@ -265,14 +271,15 @@ footer{background:var(--navy);color:var(--white);padding:32px 0 22px}
 <script src="https://analytics.ahrefs.com/analytics.js" data-key="Af80IqN3BOo7avSGm2vZsA" async></script>
 </head>
 <body>
-<header><div class="nav-inner">
-<a href="/english.html" class="logo"><img src="../images/lantailogo.png" alt="Lantai Law Firm" class="logo-img"><span class="logo-text"><span class="logo-name">Zhao Haiying</span><span class="logo-sub">Lantai (Shanghai) Law Firm</span></span></a>
+<header id="header"><div class="nav-inner">
+<a href="/english.html" class="logo"><img src="../images/lantailogo.png" alt="Lantai Law Firm" class="logo-img"><span class="logo-text"><span class="logo-name">Partner Zhao Haiying</span><span class="logo-sub">Lantai (Shanghai) Law Firm · PARTNER</span></span></a>
 <nav class="nav-links">
 <a href="/english.html">Home</a>
 <a href="/english.html#services">Services</a>
-<a href="/en-zhao-haiying/">Lawyer</a>
+<a href="/en-zhao-haiying/" class="active">About</a>
 <a href="/english.html#cases">Cases</a>
 <a href="/english.html#faq">FAQ</a>
+<a href="/english.html#testimonials">Testimonials</a>
 <a href="/english.html#contact">Contact</a>
 <a href="/english.html#contact" class="nav-cta">Free Consultation</a>
 <span class="lang-switch"><a href="/zhao-haiying/" onclick="document.cookie='lang_choice=zh;path=/;max-age=31536000'">中文</a></span>
@@ -282,9 +289,10 @@ footer{background:var(--navy);color:var(--white);padding:32px 0 22px}
 <nav class="mobile-menu" id="mobileMenu">
 <a href="/english.html">Home</a>
 <a href="/english.html#services">Services</a>
-<a href="/en-zhao-haiying/">Lawyer</a>
+<a href="/en-zhao-haiying/">About</a>
 <a href="/english.html#cases">Cases</a>
 <a href="/english.html#faq">FAQ</a>
+<a href="/english.html#testimonials">Testimonials</a>
 <a href="/english.html#contact">Contact</a>
 <a href="/zhao-haiying/" onclick="document.cookie='lang_choice=zh;path=/;max-age=31536000'">中文</a>
 </nav>
@@ -565,6 +573,9 @@ footer{background:var(--navy);color:var(--white);padding:32px 0 22px}
 </div></footer>
 
 <script>
+window.addEventListener('scroll', function(){
+  document.getElementById('header').classList.toggle('scrolled', window.scrollY > 20);
+});
 document.getElementById('hamburger').addEventListener('click', function(){
   document.getElementById('mobileMenu').classList.toggle('open');
 });
